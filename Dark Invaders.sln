@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{0E36FC4D-08CB-3884-7C1D-E0BF0EB82765}") = "Dark Invaders", "Assembly-CSharp.csproj", "{B351CDB9-72B3-E677-83F3-4DCF618207FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B351CDB9-72B3-E677-83F3-4DCF618207FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B351CDB9-72B3-E677-83F3-4DCF618207FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B351CDB9-72B3-E677-83F3-4DCF618207FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B351CDB9-72B3-E677-83F3-4DCF618207FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
