@@ -1,3 +1,5 @@
 *.backup
-Temp/UnityLockfile
+Temp
 *.pdb
+*.csproj
+Library
