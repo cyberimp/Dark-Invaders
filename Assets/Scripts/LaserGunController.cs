@@ -32,7 +32,7 @@ public class LaserGunController : MonoBehaviour {
             foreach (RaycastHit2D item in targets)
             {
                 if (item.collider.tag == "Enemy") {
-                    item.collider.SendMessage("ApplyDamage",2f);
+                    item.collider.SendMessage("ApplyDamage",1f+power*0.2f);
                 }
 
             }
@@ -49,7 +49,9 @@ public class LaserGunController : MonoBehaviour {
 			break;
 
 		}
-	}
+        GetComponent<LineRenderer>().SetWidth(0.1f + 0.05f * power, 0.1f + 0.05f * power);
+
+    }
 	void Fire(bool state){
 		isFire = state;
 	}
