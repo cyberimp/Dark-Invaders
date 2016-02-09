@@ -7,8 +7,10 @@ public class LaserGunController : MonoBehaviour {
 	public bool isFire = false;
 	private int CD;
 
-	public Vector3 start;
-	public Vector3 finish;
+	private Vector3 start;
+	private Vector3 finish;
+
+    private RaycastHit2D[] targets;
 
 	// Use this for initialization
 	void Start () {
@@ -25,10 +27,17 @@ public class LaserGunController : MonoBehaviour {
 				GetComponent<LineRenderer> ().enabled = true;
 				GetComponent<LineRenderer> ().SetPosition (0, start);
 				GetComponent<LineRenderer> ().SetPosition (1, finish);
-
 			}
-		}
-		else
+            targets = Physics2D.RaycastAll(start, finish);
+            foreach (RaycastHit2D item in targets)
+            {
+                if (item.collider.tag == "Enemy") {
+                    item.collider.SendMessage("ApplyDamage",2f);
+                }
+
+            }
+        }
+        else
 			GetComponent<LineRenderer> ().enabled = false;
 	}
 

@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour {
 	private Rigidbody2D myBody;
 	private GameObject bonus = null;
 	public float hp = 10f;
+    private bool dying = false;
 
 	// Use this for initialization
 	void Start () {
@@ -23,18 +24,18 @@ public class EnemyController : MonoBehaviour {
 
 	}
 
-	IEnumerator Die (){
+	void Die (){
 		if (bonus != null) {
 			GameObject newBonus = Instantiate (bonus) as GameObject;
 			newBonus.transform.position = gameObject.transform.position;
 		}
+        Destroy(GetComponent<CircleCollider2D>());
 		gameObject.tag = "MostlyHarmless";
 		ParticleSystem ps = gameObject.GetComponent<ParticleSystem> ();
 		gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 		ps.Emit (500);
-		yield return new WaitForSeconds(0.3f);
-		Destroy (gameObject);
-
+        ps.Play();
+		Destroy (gameObject,0.3f);
 	}
 
 	void ApplyDamage(float value){
@@ -42,8 +43,12 @@ public class EnemyController : MonoBehaviour {
 		ps.Play ();
 		hp -= value;
 		if (hp <= 0) {
-		//	Destroy (gameObject);
-			StartCoroutine(Die());
+            //	Destroy (gameObject);
+            if (!dying)
+            {
+                dying = true;
+                Die();
+            }
 		}
 	}
 

@@ -17,8 +17,9 @@ public class ShopSlotController : MonoBehaviour,IBeginDragHandler, IDragHandler,
 
 	public void OnDrag (PointerEventData eventData)
 	{
-		transform.localPosition = new Vector3(eventData.position.x,eventData.position.y,0)-startPosition;
-	}
+        transform.position = Input.mousePosition;
+
+    }
 
 	#endregion
 
