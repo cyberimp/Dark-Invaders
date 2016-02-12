@@ -6,7 +6,7 @@ public class MusicIndicator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        SetMusic("xenobeat\n\tgoreshit");
+        //SetMusic("o'er the flood\n\tgoreshit");
 	}
 	
 	// Update is called once per frame
