@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class LaserGunController : MonoBehaviour {
-	public int MaxCD = 5;
+	public float MaxCD = 0.2f;
 	public int power = 0;
 	public bool isFire = false;
-	private int CD;
+	private float CD;
 
 	private Vector3 start;
 	private Vector3 finish;
@@ -17,12 +17,13 @@ public class LaserGunController : MonoBehaviour {
 		CD = MaxCD;
 	}
 
+
 	// Update is called once per frame
 	void Update () {
 		start = transform.position;
 		finish = start + new Vector3 (0, 15);
 		if (isFire) {
-			CD--;
+			CD-=Time.deltaTime;
 			if (CD <= 0) {
 				GetComponent<LineRenderer> ().enabled = true;
 				GetComponent<LineRenderer> ().SetPosition (0, start);
@@ -43,12 +44,6 @@ public class LaserGunController : MonoBehaviour {
 
 	void LevelUp(){
 		power++;
-		switch (power) {
-		case 1:
-			MaxCD--;
-			break;
-
-		}
         GetComponent<LineRenderer>().SetWidth(0.1f + 0.05f * power, 0.1f + 0.05f * power);
 
     }

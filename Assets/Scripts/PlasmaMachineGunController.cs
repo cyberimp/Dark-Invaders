@@ -3,11 +3,11 @@ using System.Collections;
 
 public class PlasmaMachineGunController : MonoBehaviour {
 
-	public int MaxCD = 5;
+	public float MaxCD = 0.5f;
 	public int power = 0;
-	public bool isFire = false;
+	private bool isFire = false;
 	public GameObject bullet;
-	private int CD;
+	private float CD;
 
 	// Use this for initialization
 	void Start () {
@@ -15,10 +15,10 @@ public class PlasmaMachineGunController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (isFire) {
-			CD--;
-			if (CD <= 0)
+			CD-=Time.fixedDeltaTime;
+			if (CD <= 0.0f)
 			if (power < 2) {
 				GameObject newBullet;
 				newBullet = Instantiate (bullet, transform.position, Quaternion.identity) as GameObject;
@@ -41,7 +41,7 @@ public class PlasmaMachineGunController : MonoBehaviour {
 		power++;
 		switch (power) {
 		case 1:
-			MaxCD--;
+			MaxCD/=2;
 			break;
 				
 		}

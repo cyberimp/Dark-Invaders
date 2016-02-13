@@ -35,39 +35,35 @@ public class ShipController : MonoBehaviour {
 //		xShip = myBody.position.x - startPosition.x;
 //		gameObject.GetComponent<AudioSource> ().panStereo = (myBody.position.x-startPosition.x)/7;
 		myBody.velocity = new Vector2 (Input.GetAxis("Horizontal")*maxSpeed,Input.GetAxis("Vertical")*maxSpeed);
-	}
+        if (GodmodeCD > 0)
+        {
+            GodmodeCD -= Time.deltaTime;
+            alpha += alphaSpeed * Time.deltaTime;
+            if (alpha > 1 || alpha < 0)
+                alphaSpeed = -alphaSpeed;
+            alpha = Mathf.Clamp(alpha, 0, 1);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, alpha);
+            if (GodmodeCD <= 0)
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+        }
+    }
 
-	void Update(){
-		if (GodmodeCD > 0) {
-			GodmodeCD -= Time.deltaTime;
-			alpha += alphaSpeed*Time.deltaTime;
-			if (alpha > 1 || alpha < 0)
-				alphaSpeed = -alphaSpeed;
-			alpha = Mathf.Clamp (alpha, 0, 1);
-			gameObject.GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, alpha);
-			if (GodmodeCD <= 0)
-				gameObject.GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 1);
-		}
-		if (Input.GetButtonDown ("Jump")) {
-			gameObject.GetComponent<Animator> ().SetBool ("Fire", true);
-			Gun.SendMessage ("Fire",true);
-		}
+    void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            gameObject.GetComponent<Animator>().SetBool("Fire", true);
+            Gun.SendMessage("Fire", true);
+        }
 
-		if (Input.GetButtonUp ("Jump")) {
-			gameObject.GetComponent<Animator> ().SetBool ("Fire", false);
-			Gun.SendMessage ("Fire",false);
-		}
-		//CD--;
-		if (Input.GetButton ("Jump")){
-//			GameObject newBullet;
-//			newBullet = Instantiate (bullet, new Vector3 (myBody.position.x, myBody.position.y), Quaternion.identity) as GameObject;
-//			newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2 (0, 20);
-//			CD = maxCoolDown;
-//			gameObject.GetComponent<AudioSource> ().Play();
-		}
-	}
-
-	void GetBonus(int num){
+        if (Input.GetButtonUp("Jump"))
+        {
+            gameObject.GetComponent<Animator>().SetBool("Fire", false);
+            Gun.SendMessage("Fire", false);
+        }
+        //CD--;
+    }
+    void GetBonus(int num){
 		Gun.SendMessage ("LevelUp");
 	}
 
