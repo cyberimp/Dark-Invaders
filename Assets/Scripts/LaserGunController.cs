@@ -4,7 +4,7 @@ using System.Collections;
 public class LaserGunController : MonoBehaviour {
 	public float MaxCD = 0.5f;
 	public int power = 0;
-	public bool isFire = false;
+	private bool isFire = false;
     public GameObject afterglow;
 	private float CD;
 
