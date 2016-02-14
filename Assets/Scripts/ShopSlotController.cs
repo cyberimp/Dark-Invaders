@@ -1,15 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ShopSlotController : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler {
 
+    public GameObject weaponPrefab;
 	Vector3 startPosition;
+
+    public static GameObject itemDragged;
 
 	#region IBeginDragHandler implementation
 	public void OnBeginDrag (PointerEventData eventData)
 	{
-		startPosition = transform.localPosition;
+        itemDragged = weaponPrefab;
+		startPosition = transform.position;
+        GetComponent<CanvasGroup>().blocksRaycasts = false;
 	}
 	#endregion
 
@@ -18,6 +24,7 @@ public class ShopSlotController : MonoBehaviour,IBeginDragHandler, IDragHandler,
 	public void OnDrag (PointerEventData eventData)
 	{
         transform.position = Input.mousePosition;
+//        transform.position = GetComponentInParent<Canvas>().worldCamera.ScreenToWorldPoint(eventData.position);
 
     }
 
@@ -27,13 +34,17 @@ public class ShopSlotController : MonoBehaviour,IBeginDragHandler, IDragHandler,
 
 	public void OnEndDrag (PointerEventData eventData)
 	{
-		transform.localPosition = startPosition;
-	}
+        itemDragged = null;
+		transform.position = startPosition;
+        GetComponent<CanvasGroup>().blocksRaycasts = true;
+    }
 
-	#endregion
+    #endregion
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+
+        GetComponent<Image>().sprite = weaponPrefab.GetComponent<SpriteRenderer>().sprite;
 	
 	}
 	

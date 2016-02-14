@@ -22,7 +22,7 @@ public class PressSpaceController : MonoBehaviour {
 		Color temp = text.color;
 		text.color = new Color (temp.r, temp.g, temp.b, alpha);
 		if (Input.GetButtonUp ("Jump"))
-			SceneManager.LoadScene ("Main");
+			SceneManager.LoadScene ("Shop");
 
 	}
 }

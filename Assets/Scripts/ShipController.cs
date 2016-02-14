@@ -25,6 +25,8 @@ public class ShipController : MonoBehaviour {
 	void Start () {
 		myBody = GetComponent<Rigidbody2D> ();
 		startPosition = myBody.position;
+        Gun1 = PlayerDemoController.weaponPrefab;
+        Gun1.GetComponent<AudioSource>().enabled = true;
 		Gun = (GameObject) Instantiate (Gun1,Vector3.zero, Quaternion.identity);
 		Gun.transform.SetParent (transform);
 		Gun.transform.localPosition = Vector3.zero;
