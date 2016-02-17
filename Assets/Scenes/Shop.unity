@@ -508,8 +508,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000047684, y: -248.7}
-  m_SizeDelta: {x: 0, y: -494.4}
+  m_AnchoredPosition: {x: -0.0000047684, y: -209.2}
+  m_SizeDelta: {x: 0, y: -415.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &649043075
 MonoBehaviour:
@@ -671,8 +671,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: 174.5}
-  m_SizeDelta: {x: -319, y: -495}
+  m_AnchoredPosition: {x: -10, y: 169.7}
+  m_SizeDelta: {x: -319, y: -424.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710591871
 MonoBehaviour:
@@ -1011,7 +1011,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: c1bd3f205e9f93b439e56441a7407a70, type: 3}
+  m_Sprite: {fileID: 21300002, guid: b08417b2df149be4599be5a78b6da646, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1483,7 +1483,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c1bd3f205e9f93b439e56441a7407a70, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b08417b2df149be4599be5a78b6da646, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db89b2af6a3c374bb98512e01fa9962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 126348, guid: fdaa29cbe6f5368469b0249de163dc84, type: 2}
+  weaponPrefab: {fileID: 126348, guid: 1c08f86a9548a4e40803d4ed6343fc4e, type: 2}
 --- !u!225 &1813107338
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1636,7 +1636,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: c1bd3f205e9f93b439e56441a7407a70, type: 3}
+  m_Sprite: {fileID: 21300002, guid: b08417b2df149be4599be5a78b6da646, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1661,7 +1661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db89b2af6a3c374bb98512e01fa9962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 119084, guid: fc600ace19c1fe44ea8e117a19415acf, type: 2}
+  weaponPrefab: {fileID: 119084, guid: 36f512e8e7a876f49ad7d348a1bb26f3, type: 2}
 --- !u!225 &2109582793
 CanvasGroup:
   m_ObjectHideFlags: 0
