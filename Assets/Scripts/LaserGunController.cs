@@ -31,6 +31,7 @@ public class LaserGunController : MonoBehaviour {
             CD -= Time.deltaTime;
             if (CD <= 0)
             {
+                GetComponent<AudioSource>().Play();
                 GetComponent<LineRenderer>().enabled = true;
                 GetComponent<LineRenderer>().SetPosition(0, start);
                 GetComponent<LineRenderer>().SetPosition(1, finish);
@@ -53,6 +54,7 @@ public class LaserGunController : MonoBehaviour {
         }
         else
         {
+            GetComponent<AudioSource>().Stop();
             GetComponent<LineRenderer>().enabled = false;
             CD = MaxCD;
         }
