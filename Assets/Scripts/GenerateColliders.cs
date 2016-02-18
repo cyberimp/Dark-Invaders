@@ -10,6 +10,7 @@ public class GenerateColliders : MonoBehaviour {
 	public float z_axis = 0f;
 
 	public string colliderTag = "Finish";
+    public int layer = 12;
 
 	private Vector2 screenSize;
 
@@ -48,7 +49,8 @@ public class GenerateColliders : MonoBehaviour {
 			if (string.Compare(bc.Key, 0, "Enemy",0,5) == 0)
 				bc.Value.tag = "Enemy"+colliderTag; 
 			else
-				bc.Value.tag = colliderTag; 
+				bc.Value.tag = colliderTag;
+            bc.Value.gameObject.layer = layer;
 			}
 
 		//Change position of the objects to align perfectly with outer-edge of screen

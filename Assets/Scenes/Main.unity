@@ -1597,7 +1597,7 @@ GameObject:
   - 124: {fileID: 1136455446}
   - 81: {fileID: 1136455445}
   - 114: {fileID: 1136455450}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1685,6 +1685,7 @@ MonoBehaviour:
   widthOfCollider: 2
   z_axis: 0
   colliderTag: Finish
+  layer: 12
 --- !u!1 &1158875476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,16 +2873,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11491214, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
-      propertyPath: Gun1
-      value: 
-      objectReference: {fileID: 119084, guid: 36f512e8e7a876f49ad7d348a1bb26f3, type: 2}
-    - target: {fileID: 146658, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8227322, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2089380754

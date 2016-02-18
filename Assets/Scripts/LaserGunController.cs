@@ -18,6 +18,7 @@ public class LaserGunController : MonoBehaviour {
 	void Start () {
         start = new Vector3();
 		CD = MaxCD;
+        GetComponent<LineRenderer>().sortingLayerName = "Bullets";
 	}
 
 
@@ -41,15 +42,16 @@ public class LaserGunController : MonoBehaviour {
                     newGlow.GetComponent<LineRenderer>().SetPosition(0, start);
                     newGlow.GetComponent<LineRenderer>().SetPosition(1, finish);
                 }
-                targets = Physics2D.RaycastAll(start, finish);
-                foreach (RaycastHit2D item in targets)
-                {
-                    if (item.collider.tag == "Enemy")
+                targets = Physics2D.RaycastAll(start, Vector2.up,100,LayerMask.GetMask("Enemy"));
+                if (targets!=null)
+                    foreach (RaycastHit2D item in targets)
                     {
-                        item.collider.SendMessage("ApplyDamage", 1f + power * 0.2f);
-                    }
+                        if (item.collider.tag == "Enemy")
+                        {
+                            item.collider.SendMessage("ApplyDamage", 1f + power * 0.2f);
+                        }
 
-                }
+                    }
             }
         }
         else

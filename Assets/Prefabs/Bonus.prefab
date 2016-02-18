@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5070062}
   - 61: {fileID: 6158700}
   - 114: {fileID: 11488680}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Bonus
   m_TagString: Bonus
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1510699049
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 56276ba7513e1a5418fcfa4f38bb754f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -109,7 +109,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SortingLayerID
+      value: 1510699049
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167986}

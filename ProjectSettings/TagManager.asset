@@ -20,10 +20,10 @@ TagManager:
   - 
   - Player
   - Enemy
-  - 
-  - 
-  - 
-  - 
+  - Player Bullets
+  - Enemy Bullets
+  - Obstacle
+  - Bonus
   - 
   - 
   - 
@@ -45,6 +45,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Bullets
+    uniqueID: 1510699049
+    locked: 0
+  - name: Enemies
+    uniqueID: 235045271
     locked: 0
   - name: Hero
     uniqueID: 2365355131
