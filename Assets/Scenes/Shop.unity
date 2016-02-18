@@ -256,7 +256,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 430633106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23d79f778c26a20448b5bff0c5033b5a, type: 3}
+  m_Script: {fileID: 11500000, guid: 320f7df35ae97374a9f02633e4afeddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &534296932
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 538202567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41508c4845eb26e4b83ca1e3cba7d580, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f760ff5012dc1f4caba4b47c8f1a7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &538202572
@@ -682,10 +682,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 710591869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99226a43eb783574fa9e5b105239cb65, type: 3}
+  m_Script: {fileID: 11500000, guid: ac56bbea78da02c499e036c0efa09ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 119084, guid: fc600ace19c1fe44ea8e117a19415acf, type: 2}
+  weaponPrefab: {fileID: 119084, guid: 36f512e8e7a876f49ad7d348a1bb26f3, type: 2}
   playerDemo: {fileID: 538202567}
   label: {fileID: 430633108}
 --- !u!222 &710591872
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 538202571}
         m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
