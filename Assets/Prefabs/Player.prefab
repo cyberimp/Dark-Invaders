@@ -16,7 +16,7 @@ GameObject:
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: a9981c5843a41fa4ba1b19afd7323f61, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

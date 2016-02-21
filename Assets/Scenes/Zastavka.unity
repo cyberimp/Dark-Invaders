@@ -430,9 +430,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659e285975f3afa40a5e89e32b6fafee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starSize: 0
+  starSize: 1
   numStars: 100
-  xStarSpeed: 0.5
+  xStarSpeed: 0.3
   yStarSpeed: 0
 --- !u!114 &339611138
 MonoBehaviour:
@@ -607,9 +607,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659e285975f3afa40a5e89e32b6fafee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starSize: 2
+  starSize: 3
   numStars: 100
-  xStarSpeed: 0.3
+  xStarSpeed: 0.5
   yStarSpeed: 0
 --- !u!114 &1835811897
 MonoBehaviour:
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659e285975f3afa40a5e89e32b6fafee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starSize: 1
+  starSize: 2
   numStars: 100
   xStarSpeed: 0.4
   yStarSpeed: 0
