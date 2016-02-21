@@ -32,6 +32,7 @@ public class LaserGunController : MonoBehaviour {
             CD -= Time.deltaTime;
             if (CD <= 0)
             {
+                GetComponent<LineRenderer>().sortingLayerName = "Bullets";
                 GetComponent<AudioSource>().Play();
                 GetComponent<LineRenderer>().enabled = true;
                 GetComponent<LineRenderer>().SetPosition(0, start);

@@ -10,6 +10,7 @@ public class AfterglowController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        GetComponent<LineRenderer>().sortingLayerName = "Bullets";
 
 	    
 	}
