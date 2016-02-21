@@ -366,7 +366,7 @@ GameObject:
   - 114: {fileID: 538202571}
   - 50: {fileID: 538202573}
   - 61: {fileID: 538202572}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Player demo
   m_TagString: Finish
   m_Icon: {fileID: 0}

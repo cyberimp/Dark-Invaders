@@ -14,8 +14,13 @@ public class LaserGunController : MonoBehaviour {
 
     private RaycastHit2D[] targets;
 
-	// Use this for initialization
-	void Start () {
+    void Awake()
+    {
+        GetComponent<LineRenderer>().sortingLayerName = "Bullets";
+    }
+
+    // Use this for initialization
+    void Start () {
         start = new Vector3();
 		CD = MaxCD;
         GetComponent<LineRenderer>().sortingLayerName = "Bullets";
@@ -32,11 +37,13 @@ public class LaserGunController : MonoBehaviour {
             CD -= Time.deltaTime;
             if (CD <= 0)
             {
-                GetComponent<LineRenderer>().sortingLayerName = "Bullets";
                 GetComponent<AudioSource>().Play();
                 GetComponent<LineRenderer>().enabled = true;
-                GetComponent<LineRenderer>().SetPosition(0, start);
-                GetComponent<LineRenderer>().SetPosition(1, finish);
+                GetComponent<LineRenderer>().sortingLayerName = "Bullets";
+                //GetComponent<LineRenderer>().SetPosition(0, start);
+                //GetComponent<LineRenderer>().SetPosition(1, finish);
+                GetComponent<LineRenderer>().SetPosition(0, Vector3.zero);
+                GetComponent<LineRenderer>().SetPosition(1, new Vector3(0, 15));
                 if (!start.Equals(oldStart))
                 {
                     GameObject newGlow = Instantiate(afterglow);

@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 497188}
   - 212: {fileID: 21238376}
-  - 114: {fileID: 11477244}
   - 120: {fileID: 12002028}
+  - 114: {fileID: 11477244}
   - 82: {fileID: 8239486}
   m_Layer: 10
   m_Name: LaserGun
@@ -158,7 +158,7 @@ LineRenderer:
     m_EndColor:
       serializedVersion: 2
       rgba: 4278190335
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
 --- !u!212 &21238376
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -223,7 +223,7 @@ Prefab:
       objectReference: {fileID: 134152, guid: 4ee582c0b7d65e743821f20f01cd768c, type: 2}
     - target: {fileID: 0}
       propertyPath: m_UseWorldSpace
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_ProbeAnchor

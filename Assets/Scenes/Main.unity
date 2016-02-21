@@ -652,7 +652,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_LocalRotation.x
@@ -676,19 +676,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 374
       objectReference: {fileID: 0}
     - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 250.5
       objectReference: {fileID: 0}
     - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 535.82886
       objectReference: {fileID: 0}
     - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_AnchorMin.x
@@ -708,11 +708,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_Pivot.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22339190, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_Camera
@@ -728,7 +728,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11479724, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: yStarSpeed
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 11411104, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: yStarSpeed
@@ -740,7 +740,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11414436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_RaycastTarget
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22441532, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_AnchorMax.x
@@ -800,11 +800,11 @@ Prefab:
       objectReference: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 11458136, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_RaycastTarget
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 189034, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_Layer
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22339190, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_SortingLayerID
@@ -812,11 +812,39 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 143520, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_Layer
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 143678, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
       propertyPath: m_Layer
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418102, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22339190, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.935
+      objectReference: {fileID: 0}
+    - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.935
+      objectReference: {fileID: 0}
+    - target: {fileID: 22498436, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.935
+      objectReference: {fileID: 0}
+    - target: {fileID: 22339190, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
+      propertyPath: m_PixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22339190, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
+      propertyPath: m_PlaneDistance
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a3f7d452f452b74585313f2b84d4b92, type: 2}
@@ -1784,7 +1812,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
