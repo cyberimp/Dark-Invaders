@@ -6,7 +6,7 @@ using System;
 
 public class ShipSlotController : MonoBehaviour, IDropHandler
 {
-
+    public ShopSlotController.ItemType accept; 
     public GameObject weaponPrefab;
     public GameObject playerDemo;
     public Text label;
@@ -23,20 +23,36 @@ public class ShipSlotController : MonoBehaviour, IDropHandler
 
     }
 
+    void UpdateColor()
+    {
+        if (ShopSlotController.itemDragged != null && ShopSlotController.typeDragged == accept)
+            GetComponent<Image>().color = Color.green;
+        else
+            GetComponent<Image>().color = Color.white;
+
+    }
+
     private void WeaponUpdate()
     {
         if (weaponPrefab != null)
-        {
+        { 
             GetComponentsInChildren<Image>()[1].sprite = weaponPrefab.GetComponent<SpriteRenderer>().sprite;
-            label.SendMessage("SetText", weaponPrefab.name);
-            playerDemo.SendMessage("SetWeapon", weaponPrefab);
+            if (accept == ShopSlotController.ItemType.weapon)
+            {
+                label.SendMessage("SetText", weaponPrefab.name);
+                playerDemo.SendMessage("SetWeapon", weaponPrefab);
+            }
+            else
+                playerDemo.SendMessage("SetUtility", weaponPrefab);
         }
     }
 
     public void OnDrop(PointerEventData eventData)
     {
-
-        weaponPrefab = ShopSlotController.itemDragged;
-        WeaponUpdate();
+        if (ShopSlotController.itemDragged != null && ShopSlotController.typeDragged == accept)
+        {
+            weaponPrefab = ShopSlotController.itemDragged;
+            WeaponUpdate();
+        }
     }
 }

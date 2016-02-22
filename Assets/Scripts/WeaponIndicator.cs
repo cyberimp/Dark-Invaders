@@ -20,7 +20,7 @@ public class WeaponIndicator : MonoBehaviour {
 
     void UpdateImage()
     {
-        GameObject gun = GameObject.FindGameObjectWithTag("Player").GetComponent<ShipController>().Gun1;
+        GameObject gun = GameObject.FindGameObjectWithTag("Player").GetComponent<ShipController>().GunSlot1;
         imageComponent.sprite = gun.GetComponent<SpriteRenderer>().sprite;
     }
 }

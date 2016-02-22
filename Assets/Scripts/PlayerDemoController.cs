@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class PlayerDemoController : MonoBehaviour {
 
     public static GameObject weaponPrefab;
+    public static GameObject utilityPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +31,19 @@ public class PlayerDemoController : MonoBehaviour {
         weaponPrefab.name = "Test Gun";
         weaponPrefab.transform.localPosition = new Vector3();
         weaponPrefab.SendMessage("Fire", true);
+    }
+
+    void SetUtility(GameObject prefab)
+    {
+        if (utilityPrefab != null)
+        {
+            Destroy(utilityPrefab);
+        }
+        utilityPrefab = Instantiate(prefab);
+        utilityPrefab.GetComponent<AudioSource>().enabled = false;
+        utilityPrefab.transform.parent = transform;
+        utilityPrefab.name = "Test Utility";
+        utilityPrefab.transform.localPosition = new Vector3();
     }
 
     public void NextScene() {

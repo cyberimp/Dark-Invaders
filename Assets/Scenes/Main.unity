@@ -4536,37 +4536,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 5.04
+    - target: {fileID: 11491214, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
+      propertyPath: UtilitySlot1
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: VelocityModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: VelocityModule.x.scalar
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_SortingLayerID
-      value: 1510699049
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: VelocityModule.y.scalar
-      value: 5.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: InitialModule.gravityModifier
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: ShapeModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2089380754

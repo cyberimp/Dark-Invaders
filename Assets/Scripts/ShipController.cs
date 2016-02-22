@@ -6,14 +6,16 @@ public class ShipController : MonoBehaviour {
 	public float maxSpeed = 10f;
 //	public GameObject bullet;
 
-	public GameObject Gun1;
+	public GameObject GunSlot1;
+    public GameObject UtilitySlot1;
 
 	private GameObject Gun;
+    private GameObject Utility;
 
-//	public float xShip; 
-//	public int maxCoolDown = 2;
-//	private int CD=1;
-	private Rigidbody2D myBody;
+    //	public float xShip; 
+    //	public int maxCoolDown = 2;
+    //	private int CD=1;
+    private Rigidbody2D myBody;
 	private Vector2 startPosition;
 
 	private float GodmodeCD = 5.0f;
@@ -26,15 +28,27 @@ public class ShipController : MonoBehaviour {
 		myBody = GetComponent<Rigidbody2D> ();
 		startPosition = myBody.position;
         if (PlayerDemoController.weaponPrefab!=null)
-            Gun1 = PlayerDemoController.weaponPrefab;
-        Gun1.GetComponent<AudioSource>().enabled = true;
-		Gun = (GameObject) Instantiate (Gun1,Vector3.zero, Quaternion.identity);
-		Gun.transform.SetParent (transform);
-		Gun.transform.localPosition = Vector3.zero;
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+            GunSlot1 = PlayerDemoController.weaponPrefab;
+        if (PlayerDemoController.utilityPrefab != null)
+            UtilitySlot1 = PlayerDemoController.utilityPrefab;
+        if (GunSlot1 != null)
+        {
+            GunSlot1.GetComponent<AudioSource>().enabled = true;
+            Gun = (GameObject)Instantiate(GunSlot1, Vector3.zero, Quaternion.identity);
+            Gun.transform.SetParent(transform);
+            Gun.transform.localPosition = Vector3.zero;
+        }
+        if (UtilitySlot1 != null)
+        {
+            UtilitySlot1.GetComponent<AudioSource>().enabled = true;
+            Utility = (GameObject)Instantiate(UtilitySlot1, Vector3.zero, Quaternion.identity);
+            Utility.transform.SetParent(transform);
+            Utility.transform.localPosition = Vector3.zero;
+        }
+    }
+
+    // Update is called once per frame
+    void FixedUpdate () {
 //		xShip = myBody.position.x - startPosition.x;
 //		gameObject.GetComponent<AudioSource> ().panStereo = (myBody.position.x-startPosition.x)/7;
 		myBody.velocity = new Vector2 (Input.GetAxis("Horizontal")*maxSpeed,Input.GetAxis("Vertical")*maxSpeed);

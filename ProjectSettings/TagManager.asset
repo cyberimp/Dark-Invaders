@@ -9,6 +9,8 @@ TagManager:
   - MostlyHarmless
   - EnemyFinish
   - Bonus
+  - Tractor
+  - Slot
   layers:
   - Default
   - TransparentFX

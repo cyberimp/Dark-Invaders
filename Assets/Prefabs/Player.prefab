@@ -92,7 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 10
-  Gun1: {fileID: 119084, guid: 36f512e8e7a876f49ad7d348a1bb26f3, type: 2}
+  GunSlot1: {fileID: 119084, guid: 36f512e8e7a876f49ad7d348a1bb26f3, type: 2}
+  UtilitySlot1: {fileID: 185682, guid: 474cd289b99c00641a9167cd79501e9e, type: 2}
 --- !u!212 &21246862
 SpriteRenderer:
   m_ObjectHideFlags: 1
