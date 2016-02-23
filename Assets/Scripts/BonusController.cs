@@ -12,8 +12,8 @@ public class BonusController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (isDragged)
-            GetComponent<Rigidbody2D>().velocity = (player.transform.position - transform.position);
+ //       if (isDragged)
+ //           GetComponent<Rigidbody2D>().velocity = (player.transform.position - transform.position);
 
     }
 
@@ -24,10 +24,12 @@ public class BonusController : MonoBehaviour {
 			player.SendMessage ("GetBonus", 1);
 			Destroy (gameObject);
 		}
-        if (other.tag == "Tractor")
-        {
-            isDragged = true;
+//        if (other.tag == "Tractor")
+//        {
+//            //            isDragged = true;
+//            GetComponent<SpringJoint2D>().connectedBody = player.GetComponent<Rigidbody2D>();
+//            GetComponent<SpringJoint2D>().enabled = true;
 
-        }
+//        }
 	}
 }

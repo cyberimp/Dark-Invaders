@@ -37,7 +37,6 @@ public class LaserGunController : MonoBehaviour {
             CD -= Time.deltaTime;
             if (CD <= 0)
             {
-                GetComponent<AudioSource>().Play();
                 GetComponent<LineRenderer>().enabled = true;
                 GetComponent<LineRenderer>().sortingLayerName = "Bullets";
                 //GetComponent<LineRenderer>().SetPosition(0, start);
@@ -64,7 +63,6 @@ public class LaserGunController : MonoBehaviour {
         }
         else
         {
-            GetComponent<AudioSource>().Stop();
             GetComponent<LineRenderer>().enabled = false;
             CD = MaxCD;
         }
@@ -77,5 +75,10 @@ public class LaserGunController : MonoBehaviour {
     }
 	void Fire(bool state){
 		isFire = state;
-	}
+        if (isFire)
+            GetComponent<AudioSource>().Play();
+        else
+            GetComponent<AudioSource>().Stop();
+
+    }
 }
