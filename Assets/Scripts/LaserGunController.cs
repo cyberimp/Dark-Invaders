@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LaserGunController : MonoBehaviour {
+interface IWeapon
+{
+    void Fire(bool state);
+    void LevelUp();
+}
+
+public class LaserGunController : MonoBehaviour,IWeapon {
 	public float MaxCD = 0.5f;
 	public int power = 0;
 	private bool isFire = false;
@@ -68,12 +74,12 @@ public class LaserGunController : MonoBehaviour {
         }
 	}
 
-	void LevelUp(){
+	public void LevelUp(){
 		power++;
         GetComponent<LineRenderer>().SetWidth(0.1f + 0.05f * power, 0.1f + 0.05f * power);
 
     }
-	void Fire(bool state){
+	public void Fire(bool state){
 		isFire = state;
         if (isFire)
             GetComponent<AudioSource>().Play();

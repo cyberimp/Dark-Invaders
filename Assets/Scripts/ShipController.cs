@@ -9,9 +9,7 @@ public class ShipController : MonoBehaviour {
 	public GameObject GunSlot1;
     public GameObject UtilitySlot1;
 
-	private GameObject Gun;
-    private GameObject Utility;
-
+	private GameObject[] inventory;
     //	public float xShip; 
     //	public int maxCoolDown = 2;
     //	private int CD=1;
@@ -34,16 +32,16 @@ public class ShipController : MonoBehaviour {
         if (GunSlot1 != null)
         {
             GunSlot1.GetComponent<AudioSource>().enabled = true;
-            Gun = (GameObject)Instantiate(GunSlot1, Vector3.zero, Quaternion.identity);
-            Gun.transform.SetParent(transform);
-            Gun.transform.localPosition = Vector3.zero;
+            inventory[0] = (GameObject)Instantiate(GunSlot1, Vector3.zero, Quaternion.identity);
+            inventory[0].transform.SetParent(transform);
+            inventory[0].transform.localPosition = Vector3.zero;
         }
         if (UtilitySlot1 != null)
         {
             UtilitySlot1.GetComponent<AudioSource>().enabled = true;
-            Utility = (GameObject)Instantiate(UtilitySlot1, Vector3.zero, Quaternion.identity);
-            Utility.transform.SetParent(transform);
-            Utility.transform.localPosition = Vector3.zero;
+            inventory[1] = (GameObject)Instantiate(UtilitySlot1, Vector3.zero, Quaternion.identity);
+            inventory[1].transform.SetParent(transform);
+            inventory[1].transform.localPosition = Vector3.zero;
         }
     }
 
@@ -70,18 +68,18 @@ public class ShipController : MonoBehaviour {
         if (Input.GetButtonDown("Jump"))
         {
             gameObject.GetComponent<Animator>().SetBool("Fire", true);
-            Gun.SendMessage("Fire", true);
+            inventory[0].SendMessage("Fire", true);
         }
 
         if (Input.GetButtonUp("Jump"))
         {
             gameObject.GetComponent<Animator>().SetBool("Fire", false);
-            Gun.SendMessage("Fire", false);
+            inventory[0].SendMessage("Fire", false);
         }
         //CD--;
     }
     void GetBonus(int num){
-		Gun.SendMessage ("LevelUp");
+		inventory[0].SendMessage ("LevelUp");
 	}
 
 	void Die(){
