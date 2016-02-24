@@ -10,13 +10,3 @@ before_script:
 - chmod +x ./Scripts/build.sh
 script:
 - "./Scripts/build.sh"
-deploy:
-  skip_cleanup: true
-  provider: s3
-  access_key_id: AKIAJ2BVXGIXD2KHDC3Q
-  secret_access_key:
-    secure: gqta0n57d6kF16TI40a9yu0voHVYfFi2A/nB+CPxKlGzfPx/5zdFnODL2VIGwDKqMCU+j9lQJ5y1z146kaUyqmZjuLCpMu/kTsJXag6tOzlD2R/nZVWnRu2vxzOhMDfd6WIuD1YvVsFQJc+MXL78yRYavTWuQT5nPd2EwMa7Zhyt8p186tdXpTHnU+0Jon93rAWLPX8AivmGkgKKZRyHDtibz1icyxINh2DDVOux+7rpzVUEFgko2mtjWTKMMnAOovqQCUZ25BiCoFvWFwjb2Mbj2XyMj5qGdTvJNi4jcCx6YAEvThb/NHZtn5FE6o8SRC0ut3JtfkgQI22ibAQqHNb19WrJln9Y+GvS88PTlbklTv/1so20PRt0arcuNISl+Jn6srTQR4kI1rBKbLmTvkHRVAesvrml32FKLFq8STi3usB2r1QcPAEIGsUyPUbNY2M5o5U6gWPbBsetg0QEaQOnlPLXqpn5g/OPeMr+/knxy/iAQ58ou9Zvh1u0XojPSuL0Ennn71R9fFc1eD6xX5MBnRg8c76RDdM15+VlncQ7PlmNn2VMVn5I64ucZOkQgBM503mJI1yximk41DQV+I+O+9Aav8K/5KlStjM1aIcsxcDxHMp/3R8G/evOInF2k/qoUbv3n7omKimOA96zKuU2UmnE4zaYsJbhDD5A6DY=
-  bucket: drkinvdrs
-  acl: public_read
-  on:
-    repo: cyberimp/Dark-Invaders
