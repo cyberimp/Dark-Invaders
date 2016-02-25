@@ -4,7 +4,8 @@ using System.Collections;
 
 public class MenuController : MonoBehaviour {
 
-	private Canvas canvas;
+    public GameObject Music;
+    private Canvas canvas;
 	private bool visible;
 	// Use this for initialization
 	void Start () {
@@ -16,11 +17,17 @@ public class MenuController : MonoBehaviour {
 	void Update () {
 		if(Input.GetButtonUp("Cancel")){
 			visible = !visible;
-			if (visible)
-				Time.timeScale = 0;
-			else
-				Time.timeScale = 1;
-			canvas.enabled = visible;
+            if (visible)
+            {
+                Time.timeScale = 0;
+                Music.GetComponent<AudioSource>().Pause();
+            }
+            else
+            {
+                Time.timeScale = 1;
+                Music.GetComponent<AudioSource>().UnPause();
+            }
+            canvas.enabled = visible;
 		}
 	
 	}
