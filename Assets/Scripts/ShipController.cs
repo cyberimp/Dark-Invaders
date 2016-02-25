@@ -23,6 +23,7 @@ public class ShipController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        inventory = new GameObject[2];
 		myBody = GetComponent<Rigidbody2D> ();
 		startPosition = myBody.position;
         if (PlayerDemoController.weaponPrefab!=null)

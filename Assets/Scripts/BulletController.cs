@@ -20,5 +20,10 @@ public class BulletController : MonoBehaviour {
 			other.SendMessage ("ApplyDamage", 1);
 			Destroy (gameObject);
 		}
-	}
+        if (other.tag == "Player")
+        {
+            other.SendMessage("Die");
+            Destroy(gameObject);
+        }
+    }
 }

@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour {
 	private Rigidbody2D myBody;
 	private GameObject bonus = null;
 	public float hp = 10f;
+    public GameObject bullet;
     private bool dying = false;
 
 	// Use this for initialization
@@ -77,4 +78,10 @@ public class EnemyController : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
+    
+    void Fire(Vector2 direction)
+    {
+        GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector2.up, direction)) as GameObject;
+        newBullet.GetComponent<Rigidbody2D>().velocity = direction;
+    }
 }

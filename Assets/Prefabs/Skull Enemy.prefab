@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+  bullet: {fileID: 167462, guid: 7ea8d91eeb98e314792e9fdce6f0d884, type: 2}
 --- !u!198 &19816878
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1683,6 +1684,10 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 1510699049
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 167462, guid: 7ea8d91eeb98e314792e9fdce6f0d884, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 163526}
