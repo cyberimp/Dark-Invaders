@@ -20,6 +20,7 @@ public class SpawnController : MonoBehaviour {
 	void Spawn(bool isBonus) {
         ParticleSystem ps = GetComponent<ParticleSystem>();
         ps.Play();
+        GetComponent<AudioSource>().Play();
 		GameObject newEnemy = Instantiate (enemyType) as GameObject;
 		newEnemy.transform.position = gameObject.transform.position;
 		if (isBonus)

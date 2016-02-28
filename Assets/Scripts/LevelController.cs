@@ -32,7 +32,7 @@ public class LevelController : MonoBehaviour {
                 enemies = GameObject.FindGameObjectsWithTag("Enemy");
                 foreach (GameObject enemy in enemies)
                 {
-                    enemy.SendMessage("Fire", (Vector2)(player.transform.position - enemy.transform.position));
+                    enemy.SendMessage("Fire", (Vector2)(player.transform.position - enemy.transform.position),SendMessageOptions.DontRequireReceiver);
                 }
                 yield return new WaitForSeconds(0.6f);
             }

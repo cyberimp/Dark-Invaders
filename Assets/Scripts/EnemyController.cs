@@ -32,11 +32,13 @@ public class EnemyController : MonoBehaviour {
 		}
         Destroy(GetComponent<CircleCollider2D>());
         GetComponent<Animator>().SetBool("isDead", true);
+        GetComponent<AudioSource>().Play();
 		gameObject.tag = "MostlyHarmless";
 		ParticleSystem ps = gameObject.GetComponent<ParticleSystem> ();
 		//gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 		ps.Emit (500);
         ps.Play();
+
 		Destroy (gameObject,0.3f);
 	}
 
