@@ -1,5 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+
+public class nameComparer : IComparer
+{
+    public int Compare(object x, object y)
+    {
+        return (new CaseInsensitiveComparer()).Compare(((GameObject)x).name, ((GameObject)y).name);
+    }
+}
 
 public class LevelController : MonoBehaviour {
     public AudioSource music;
@@ -9,8 +18,10 @@ public class LevelController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        nameComparer compare = new nameComparer();
         player = GameObject.FindGameObjectWithTag("Player");
 		spawnPoints = GameObject.FindGameObjectsWithTag ("Respawn");
+        Array.Sort(spawnPoints,compare);
 		StartCoroutine (LevelScript());
 
 	}
@@ -32,7 +43,8 @@ public class LevelController : MonoBehaviour {
                 enemies = GameObject.FindGameObjectsWithTag("Enemy");
                 foreach (GameObject enemy in enemies)
                 {
-                    enemy.SendMessage("Fire", (Vector2)(player.transform.position - enemy.transform.position),SendMessageOptions.DontRequireReceiver);
+                    enemy.SendMessage("Fire", (Vector2)(player.transform.position - enemy.transform.position),
+                        SendMessageOptions.DontRequireReceiver);
                 }
                 yield return new WaitForSeconds(0.6f);
             }
