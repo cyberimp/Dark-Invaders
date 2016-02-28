@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61175d1ef47994f46bc71cc99e93b509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: {fileID: 163526, guid: 05f9a229074ae1d428c6f95c490f816b, type: 2}
+  enemyType: {fileID: 122764, guid: 6a28eb6d87054ac4393abfeb0c577502, type: 2}
   bonus: {fileID: 167986, guid: ea8cb7e467ec5f84f9ec7313e0d12c68, type: 2}
   direction: {x: 2, y: 0}
 --- !u!198 &19873484
@@ -1655,6 +1655,10 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 1510699049
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: enemyType
+      value: 
+      objectReference: {fileID: 122764, guid: 6a28eb6d87054ac4393abfeb0c577502, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 180328}
