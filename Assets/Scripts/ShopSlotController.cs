@@ -65,7 +65,7 @@ public class ShopSlotController : MonoBehaviour,IBeginDragHandler, IDragHandler,
     // Use this for initialization
     void Start () {
 
-        GetComponent<Image>().sprite = weaponPrefab.GetComponent<SpriteRenderer>().sprite;
+    //    GetComponent<Image>().sprite = weaponPrefab.GetComponent<SpriteRenderer>().sprite;
 	
 	}
 	

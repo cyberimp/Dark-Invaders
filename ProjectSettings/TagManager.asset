@@ -11,6 +11,8 @@ TagManager:
   - Bonus
   - Tractor
   - Slot
+  - Shield
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
