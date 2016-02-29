@@ -218,8 +218,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000022888184, y: -0.09084204}
-  m_SizeDelta: {x: 800, y: 535.66}
+  m_AnchoredPosition: {x: 15, y: -1}
+  m_SizeDelta: {x: 1010, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &144665814
 MonoBehaviour:
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: cd6d2b1f421f9204fb1057b042b2e78a, type: 3}
   m_Color: {r: 0.9411765, g: 0.80811363, b: 0.37370244, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: cd6d2b1f421f9204fb1057b042b2e78a, type: 3}
   m_Color: {r: 0.9411765, g: 0.80811363, b: 0.37370244, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: cd6d2b1f421f9204fb1057b042b2e78a, type: 3}
   m_Color: {r: 0.9411765, g: 0.80811363, b: 0.37370244, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -4452,7 +4452,7 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: cd6d2b1f421f9204fb1057b042b2e78a, type: 3}
   m_Color: {r: 0.9411765, g: 0.80811363, b: 0.37370244, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -4959,7 +4959,7 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: cd6d2b1f421f9204fb1057b042b2e78a, type: 3}
   m_Color: {r: 0.9411765, g: 0.80811363, b: 0.37370244, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -5058,7 +5058,7 @@ Prefab:
     - target: {fileID: 11491214, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
       propertyPath: GunSlot1
       value: 
-      objectReference: {fileID: 126348, guid: 1c08f86a9548a4e40803d4ed6343fc4e, type: 2}
+      objectReference: {fileID: 119084, guid: 36f512e8e7a876f49ad7d348a1bb26f3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
   m_IsPrefabParent: 0
