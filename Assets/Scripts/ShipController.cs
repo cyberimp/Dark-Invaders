@@ -33,7 +33,7 @@ public class ShipController : MonoBehaviour {
         if (GunSlot1 != null)
         {
             GunSlot1.GetComponent<AudioSource>().enabled = true;
-            inventory[0] = (GameObject)Instantiate(GunSlot1, Vector3.zero, Quaternion.identity);
+            inventory[0] = Instantiate(GunSlot1);
             inventory[0].transform.SetParent(transform);
             inventory[0].transform.localPosition = Vector3.zero;
         }

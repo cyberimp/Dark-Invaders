@@ -8,9 +8,10 @@ public class PlasmaMachineGunController : MonoBehaviour {
 	private bool isFire = false;
 	public GameObject bullet;
 	private float CD;
+    private ParticleSystem[] ps;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		CD = MaxCD;
 	}
 	
@@ -47,6 +48,28 @@ public class PlasmaMachineGunController : MonoBehaviour {
 		}
 	}
 	void Fire(bool state){
-		isFire = state;
-	}
+        ps = GetComponentsInChildren<ParticleSystem>();
+        isFire = state;
+        if (state)
+        {
+            foreach (ParticleSystem psCurr in ps)
+            {
+                ParticleSystem.EmissionModule module;
+                module = psCurr.emission;
+                module.enabled = true;
+                Debug.Log(psCurr);
+//                psCurr.Play();
+            }
+        }
+        else
+        {
+            foreach (ParticleSystem psCurr in ps)
+            {
+                ParticleSystem.EmissionModule module;
+                module = psCurr.emission;
+                module.enabled = false;
+//                psCurr.Pause();
+            }
+        }
+    }
 }
