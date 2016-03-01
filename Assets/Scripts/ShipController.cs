@@ -8,6 +8,7 @@ public class ShipController : MonoBehaviour {
 
 	public GameObject GunSlot1;
     public GameObject UtilitySlot1;
+    public GameObject HPBar;
 
 	private GameObject[] inventory;
     //	public float xShip; 
@@ -86,7 +87,8 @@ public class ShipController : MonoBehaviour {
 	void Die(){
 		if (GodmodeCD > 0)
 			return; //Ignore death signals when in god mode
-		myBody.position = startPosition;
-		GodmodeCD = 5.0f;
+                    //		myBody.position = startPosition;
+        HPBar.SendMessage("ChipOut");
+		GodmodeCD = 1.0f;
 	}
 }
