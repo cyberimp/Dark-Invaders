@@ -18,6 +18,7 @@ public class ShopSlotController : MonoBehaviour,IBeginDragHandler, IDragHandler,
 
     public static GameObject itemDragged;
     public static ItemType typeDragged;
+    private Transform parentTransform;
 
 	#region IBeginDragHandler implementation
 	public void OnBeginDrag (PointerEventData eventData)
@@ -31,6 +32,8 @@ public class ShopSlotController : MonoBehaviour,IBeginDragHandler, IDragHandler,
         {
             item.SendMessage("UpdateColor");
         }
+        parentTransform = transform.parent;
+        transform.SetParent(GameObject.Find("Shop UI").transform);
 	}
 	#endregion
 
@@ -50,7 +53,8 @@ public class ShopSlotController : MonoBehaviour,IBeginDragHandler, IDragHandler,
 	public void OnEndDrag (PointerEventData eventData)
 	{
         itemDragged = null;
-		transform.position = startPosition;
+        transform.SetParent(parentTransform);
+        transform.position = startPosition;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
         GameObject[] slots = GameObject.FindGameObjectsWithTag("Slot");
         foreach (GameObject item in slots)
