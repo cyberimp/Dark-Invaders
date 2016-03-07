@@ -80,14 +80,24 @@ public class RocketController : MonoBehaviour
         rotSpeed = 0f;
     }
 
+    void Die()
+    {
+        Transform trail = transform.FindChild("Trail");
+        trail.SetParent(null, true);
+        trail.GetComponent<ParticleSystem>().Stop();
+        Destroy(trail.gameObject, 3);
+        Destroy(gameObject);
+
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Finish")
-            Destroy(gameObject);
+            Die();
         if (other.tag == "Enemy")
         {
             other.SendMessage("ApplyDamage", 5);
-            Destroy(gameObject);
+            Die();
         }
 
     }

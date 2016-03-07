@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 371b134bb6efa414981398f011b5fbbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocket: {fileID: 135770, guid: c2ca0ecb0e985f44d84357d0606e5322, type: 2}
+  rocket: {fileID: 117620, guid: c2ca0ecb0e985f44d84357d0606e5322, type: 2}
 --- !u!212 &21211396
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -157,7 +157,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: rocket
       value: 
-      objectReference: {fileID: 135770, guid: c2ca0ecb0e985f44d84357d0606e5322, type: 2}
+      objectReference: {fileID: 117620, guid: c2ca0ecb0e985f44d84357d0606e5322, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 124682}
