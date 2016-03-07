@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   bullet: {fileID: 167462, guid: 7ea8d91eeb98e314792e9fdce6f0d884, type: 2}
+  explosion: {fileID: 117428, guid: 05a80d3fb2f6ef643b7823e277c2a912, type: 2}
 --- !u!198 &19851918
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1782,6 +1783,10 @@ Prefab:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 117428, guid: 05a80d3fb2f6ef643b7823e277c2a912, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 122764}

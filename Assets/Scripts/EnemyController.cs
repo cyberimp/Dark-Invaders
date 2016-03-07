@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour {
 	private GameObject bonus = null;
 	public float hp = 10f;
     public GameObject bullet;
+    public GameObject explosion;
     private bool dying = false;
 
 	// Use this for initialization
@@ -35,9 +36,12 @@ public class EnemyController : MonoBehaviour {
         GetComponent<AudioSource>().Play();
 		gameObject.tag = "MostlyHarmless";
 		ParticleSystem ps = gameObject.GetComponent<ParticleSystem> ();
-		//gameObject.GetComponent<SpriteRenderer> ().enabled = false;
-		ps.Emit (500);
-        ps.Play();
+        //gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+        //		ps.Emit (500);
+        //        ps.Play();
+        GameObject expl = Instantiate(explosion);
+        expl.transform.position = transform.position;
+        Destroy(expl, 10);
 
 		Destroy (gameObject,0.3f);
 	}

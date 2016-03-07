@@ -6,6 +6,7 @@ public class RocketController : MonoBehaviour
     private float rotSpeed = 0f;
     private Rigidbody2D cachedBody;
     private float cachedAngle;
+    public GameObject explosion;
 
 
     // Use this for initialization
@@ -85,6 +86,9 @@ public class RocketController : MonoBehaviour
         Transform trail = transform.FindChild("Trail");
         trail.SetParent(null, true);
         trail.GetComponent<ParticleSystem>().Stop();
+        GameObject expl = Instantiate(explosion);
+        expl.transform.position = transform.position;
+        Destroy(expl, 3);
         Destroy(trail.gameObject, 3);
         Destroy(gameObject);
 
