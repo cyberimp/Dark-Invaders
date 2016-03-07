@@ -5072,7 +5072,7 @@ Prefab:
     - target: {fileID: 11491214, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
       propertyPath: GunSlot1
       value: 
-      objectReference: {fileID: 124682, guid: 973ad6d2431e26142b3315c5d082fa30, type: 2}
+      objectReference: {fileID: 119084, guid: 36f512e8e7a876f49ad7d348a1bb26f3, type: 2}
     - target: {fileID: 11491214, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
       propertyPath: HPBar
       value: 
