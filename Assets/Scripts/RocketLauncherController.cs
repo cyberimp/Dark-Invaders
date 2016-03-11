@@ -31,6 +31,7 @@ public class RocketLauncherController : MonoBehaviour,IWeapon {
                     GameObject newRocket;
                     newRocket = Instantiate(rocket, transform.position, Quaternion.identity) as GameObject;
                     newRocket.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 20);
+//                    GetComponent<AudioSource>().Play();
                     CD = MaxCD;
                     //gameObject.GetComponent<AudioSource>().Play();
 

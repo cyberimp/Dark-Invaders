@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="rocket hiss_data" version="1.3.0" audacityversion="2.1.2" sel0="0.0000000000" sel1="1.0328798186" vpos="0" h="0.0000000000" zoom="734.8386388584" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="Audio Track" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="44100">
+				<waveblock start="0">
+					<simpleblockfile filename="e0003391.au" len="44100" min="-0.19839" max="0.196159" rms="0.036259"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.999977324263" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+		<waveclip offset="1.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1450">
+				<waveblock start="0">
+					<simpleblockfile filename="e0003632.au" len="1450" min="-0.002955" max="0.00288" rms="0.000093"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.000000000000" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+</project>
