@@ -7,6 +7,7 @@ public class BossGunController : Assets.Scripts.CEnemy{
     public ParticleSystem DeathRay;
     public ParticleSystem DeathRayEnergy;
     public ParticleSystem DeathRayGlow;
+    public BoxCollider2D rayCollider;
     private float FireCD = 0f;
     private float ShutdownCD = 0f;
     private bool isDead = false;
@@ -34,6 +35,7 @@ public class BossGunController : Assets.Scripts.CEnemy{
            // module = DeathRayGlow.emission;
             //module.enabled = true;
             DeathRay.Play();
+            rayCollider.enabled = true;
             ShutdownCD = 2f;
         }
         if (ShutdownCD < 0f)
@@ -42,6 +44,7 @@ public class BossGunController : Assets.Scripts.CEnemy{
             DeathRay.Stop();
             DeathRay.SetParticles(null,0);
             ShutdownCD = 0f;
+            rayCollider.enabled = false;
         }
 
     }
@@ -82,6 +85,7 @@ public class BossGunController : Assets.Scripts.CEnemy{
         ParticleSystem.EmissionModule module;
         module = DeathRayEnergy.emission;
         module.enabled = false;
+        rayCollider.enabled = false;
     }
 
 

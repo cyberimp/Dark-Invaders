@@ -84,11 +84,13 @@ public class ShipController : MonoBehaviour {
 		inventory[0].SendMessage ("LevelUp");
 	}
 
-	void Die(){
+	void Die(int times){
 		if (GodmodeCD > 0)
 			return; //Ignore death signals when in god mode
                     //		myBody.position = startPosition;
-        HPBar.SendMessage("ChipOut");
-		GodmodeCD = 1.0f;
+        for (int i = 0; i < times; ++i)
+            HPBar.SendMessage("ChipOut");
+		GodmodeCD = 0.5f;
 	}
+
 }

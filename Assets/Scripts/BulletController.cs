@@ -22,7 +22,7 @@ public class BulletController : MonoBehaviour {
 		}
         if (other.tag == "Player")
         {
-            other.SendMessage("Die");
+            other.SendMessage("Die", 1);
             Destroy(gameObject);
         }
     }

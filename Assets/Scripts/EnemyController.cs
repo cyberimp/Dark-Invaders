@@ -77,7 +77,7 @@ public class EnemyController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		string otherTag = other.gameObject.tag;
 		if (otherTag == "Player") {
-			player.SendMessage ("Die");
+			player.SendMessage ("Die",1);
 			gameObject.SendMessage ("ApplyDamage", 100);
 		}
 		if (otherTag == "EnemyFinish") {
