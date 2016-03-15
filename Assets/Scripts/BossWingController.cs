@@ -28,6 +28,7 @@ public class BossWingController : Assets.Scripts.CEnemy {
         module = ps.emission;
         module.enabled = true;
         GameObject.Find("Boss Head").SendMessage("Destroyed", signal);
+        transform.FindChild("Gun").SendMessage("Die");
 
     }
 }

@@ -5,7 +5,6 @@ public class RocketController : MonoBehaviour
 {
     private float rotSpeed = 0f;
     private Rigidbody2D cachedBody;
-    private float cachedAngle;
     public GameObject explosion;
 
 
@@ -40,9 +39,11 @@ public class RocketController : MonoBehaviour
 
             }
             float myAngle = transform.rotation.eulerAngles.z;
-            float enemyAngle = Vector3.Angle(Vector3.up, nearest.transform.position - transform.position);
-            transform.Rotate(new Vector3(0, 0, Mathf.Clamp(Mathf.DeltaAngle(myAngle,enemyAngle),
-                                                        -90f*Time.deltaTime,90f*Time.deltaTime)));
+            Vector3 enemyVector =  nearest.transform.position - transform.position;
+            transform.Rotate(new Vector3(0, 0, Mathf.Clamp(
+                Mathf.DeltaAngle(myAngle,
+                    Mathf.Atan2(enemyVector.y,enemyVector.x)*Mathf.Rad2Deg-90f),
+                -90f*Time.deltaTime,90f*Time.deltaTime)));
         }
 
         //      cachedAngle = transform.rotation.z + 90;
