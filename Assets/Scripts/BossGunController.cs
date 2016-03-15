@@ -49,6 +49,7 @@ public class BossGunController : Assets.Scripts.CEnemy{
     public override void Die()
     {
         base.Die();
+        StopFire();
         GetComponent<SpriteRenderer>().enabled = false;
         Destroy(GetComponent<PolygonCollider2D>());
         ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
@@ -63,11 +64,24 @@ public class BossGunController : Assets.Scripts.CEnemy{
     {
         if (FireCD == 0f && ShutdownCD == 0f && !isDead)
         {
+            GetComponent<AudioSource>().Play();
             ParticleSystem.EmissionModule module;
             module = DeathRayEnergy.emission;
             module.enabled = true;
             FireCD = 2f;
         }
+    }
+    public void StopFire()
+    {
+        GetComponent<AudioSource>().Stop();
+        FireCD = 0f;
+        ShutdownCD = 0f;
+        DeathRayGlow.Stop();
+        DeathRay.Stop();
+        DeathRay.SetParticles(null, 0);
+        ParticleSystem.EmissionModule module;
+        module = DeathRayEnergy.emission;
+        module.enabled = false;
     }
 
 
