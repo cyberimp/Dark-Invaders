@@ -52,6 +52,6 @@ public class LevelController : MonoBehaviour {
             yield return new WaitForSeconds(4f);
         }
         GameObject newBoss = Instantiate(boss,new Vector3 (0,8,0),Quaternion.identity) as GameObject;
-        newBoss.GetComponent<Rigidbody2D>().AddForce(Vector2.down * 200f);
+       // newBoss.GetComponent<Rigidbody2D>().AddForce(Vector2.down * 200f);
     }
 }

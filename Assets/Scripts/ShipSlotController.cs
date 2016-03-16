@@ -49,6 +49,7 @@ public class ShipSlotController : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
+        Debug.Log("ok!");
         if (ShopSlotController.itemDragged != null && ShopSlotController.typeDragged == accept)
         {
             weaponPrefab = ShopSlotController.itemDragged;

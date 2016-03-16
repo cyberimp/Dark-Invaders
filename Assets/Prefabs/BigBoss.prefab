@@ -44,6 +44,7 @@ GameObject:
   - 4: {fileID: 496760}
   - 50: {fileID: 5089222}
   - 114: {fileID: 11430182}
+  - 95: {fileID: 9527152}
   m_Layer: 9
   m_Name: BigBoss
   m_TagString: Untagged
@@ -503,7 +504,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.33, y: 0.54133785, z: 0}
+  m_LocalPosition: {x: 0.99935585, y: 3.7203712, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 446590}
@@ -707,6 +708,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &9527152
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 906ca7ee7783daa42af22fb55ea52fea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11417758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -718,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10e70fdc4b00824fa6c90ca5d0cde8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  HP: 1000
   explosion: {fileID: 117428, guid: 05a80d3fb2f6ef643b7823e277c2a912, type: 2}
   signal: 2
 --- !u!114 &11420464
@@ -732,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5914243c9c49bc446af980858ee46517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  HP: 2000
   explosion: {fileID: 117428, guid: 05a80d3fb2f6ef643b7823e277c2a912, type: 2}
 --- !u!114 &11420786
 MonoBehaviour:
@@ -775,7 +793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b84db21ccc1bdb4aac80d014988e509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  HP: 1000
   explosion: {fileID: 117428, guid: 05a80d3fb2f6ef643b7823e277c2a912, type: 2}
   DeathRay: {fileID: 19813218}
   DeathRayEnergy: {fileID: 19891236}
@@ -792,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10e70fdc4b00824fa6c90ca5d0cde8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  HP: 1000
   explosion: {fileID: 117428, guid: 05a80d3fb2f6ef643b7823e277c2a912, type: 2}
   signal: 1
 --- !u!114 &11478796
@@ -13321,6 +13339,18 @@ Prefab:
       propertyPath: bigGun
       value: 
       objectReference: {fileID: 182816}
+    - target: {fileID: 0}
+      propertyPath: HP
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 906ca7ee7783daa42af22fb55ea52fea, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 108372}
