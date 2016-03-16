@@ -31,6 +31,8 @@ public class BossHeadController : Assets.Scripts.CEnemy{
                 right = false;
                 break;
         }
+        if (!gun && !left && !right)
+            gameObject.SendMessageUpwards("GoBerserk");
     }
 
 }

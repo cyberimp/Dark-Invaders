@@ -10,6 +10,7 @@ public class BossTurretController : MonoBehaviour {
 
     private Transform playerTrans;
     private float turretCD;
+    private bool isLocked;
 
 	// Use this for initialization
 	void Start () {
@@ -19,10 +20,13 @@ public class BossTurretController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Rigidbody2D rgBody = GetComponent<Rigidbody2D>();
         Vector3 seekingVector = transform.position - playerTrans.position ;
-        rgBody.MoveRotation(Mathf.Atan2(seekingVector.y,seekingVector.x)*Mathf.Rad2Deg - 90f);
-        turretCD -= Time.deltaTime;
+        Quaternion rot = Quaternion.identity;
+        rot.eulerAngles = new Vector3(0, 0,
+            Mathf.Atan2(seekingVector.y, seekingVector.x) * Mathf.Rad2Deg - 90f);
+        transform.rotation = rot;
+        if (!isLocked)
+            turretCD -= Time.deltaTime;
         if (turretCD < 0f)
         {
             Fire();
@@ -42,5 +46,10 @@ public class BossTurretController : MonoBehaviour {
         GameObject expl = Instantiate(explosion,transform.position,Quaternion.identity) as GameObject;
         Destroy(expl, 5f);
         Destroy(gameObject);
+    }
+
+    public void Lockdown(bool state)
+    {
+        isLocked = state;
     }
 }

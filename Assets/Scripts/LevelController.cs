@@ -12,6 +12,7 @@ public class nameComparer : IComparer
 
 public class LevelController : MonoBehaviour {
     public AudioSource music;
+    public GameObject boss;
 	private GameObject[] spawnPoints;
     private GameObject[] enemies;
     private GameObject player;
@@ -34,7 +35,7 @@ public class LevelController : MonoBehaviour {
 	IEnumerator LevelScript() {
         music.SendMessage("SetMusic","bgm01");
         yield return new WaitForSeconds(2f);
-        for (int j = 0; j < 10; ++j)
+        for (int j = 0; j < 2; ++j)
         {
             for (int i = 0; i < 5; ++i)
             {
@@ -50,5 +51,7 @@ public class LevelController : MonoBehaviour {
             }
             yield return new WaitForSeconds(4f);
         }
+        GameObject newBoss = Instantiate(boss,new Vector3 (0,8,0),Quaternion.identity) as GameObject;
+        newBoss.GetComponent<Rigidbody2D>().AddForce(Vector2.down * 200f);
     }
 }
