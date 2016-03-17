@@ -6,21 +6,46 @@ using System;
 
 public class ShipSlotController : MonoBehaviour, IDropHandler
 {
-    public ShopSlotController.ItemType accept; 
-    public GameObject weaponPrefab;
+    public ShopSlotController.ItemType accept;
+    private GameObject weaponPrefab;
     public GameObject playerDemo;
     public Text label;
+    public GameObject[] weaponPrefabs;
+    public GameObject leftPanel;
+    public GameObject rightPanel;
+    private int selection = 0;
+    private bool isChoosing = false;
+    private GameObject nullGun;
 
     // Use this for initialization
     void Start()
     {
-        WeaponUpdate();
+        leftPanel.SendMessage("Visible", false);
+        rightPanel.SendMessage("Visible", false);
+        leftPanel.SendMessage("SetMain", gameObject);
+        rightPanel.SendMessage("SetMain", gameObject);
+        nullGun = Resources.Load("Guns/Null Gun") as GameObject;
+        Debug.Log(nullGun.name);
+        FillPrefabs();
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    void FillPrefabs()
+    {
+        if (selection == 0)
+            leftPanel.SendMessage("SetPrefab", nullGun);
+        else
+            leftPanel.SendMessage("SetPrefab", weaponPrefabs[selection - 1]);
+        if (selection == weaponPrefabs.Length - 1)
+            rightPanel.SendMessage("SetPrefab", nullGun);
+        else
+            rightPanel.SendMessage("SetPrefab", weaponPrefabs[selection + 1]);
+        WeaponUpdate();
     }
 
     void UpdateColor()
@@ -34,8 +59,9 @@ public class ShipSlotController : MonoBehaviour, IDropHandler
 
     private void WeaponUpdate()
     {
+        weaponPrefab = weaponPrefabs[selection];
         if (weaponPrefab != null)
-        { 
+        {
             GetComponentsInChildren<Image>()[1].sprite = weaponPrefab.GetComponent<SpriteRenderer>().sprite;
             if (accept == ShopSlotController.ItemType.weapon)
             {
@@ -55,5 +81,18 @@ public class ShipSlotController : MonoBehaviour, IDropHandler
             weaponPrefab = ShopSlotController.itemDragged;
             WeaponUpdate();
         }
+    }
+
+    public void OnClick()
+    {
+        isChoosing = !isChoosing;
+        leftPanel.SendMessage("Visible", isChoosing);
+        rightPanel.SendMessage("Visible", isChoosing);
+    }
+
+    void MoveSelection(int amount)
+    {
+        selection += amount;
+        FillPrefabs();
     }
 }
