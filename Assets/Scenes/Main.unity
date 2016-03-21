@@ -1713,6 +1713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Music: {fileID: 454981758}
+  firstItem: {fileID: 899993966}
 --- !u!114 &1096780399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4271,7 +4272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chip: {fileID: 144610, guid: 2c6c9850e1e805e489a4be030d2ddd63, type: 2}
   levelController: {fileID: 1642949224}
-  starthp: 10
 --- !u!114 &1634448720
 MonoBehaviour:
   m_ObjectHideFlags: 0

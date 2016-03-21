@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class MenuController : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class MenuController : MonoBehaviour {
     private Canvas canvas;
 	private bool visible;
     private bool isLocked = false;
+    public GameObject firstItem;
 
     // Use this for initialization
     void Start () {
@@ -23,15 +25,17 @@ public class MenuController : MonoBehaviour {
             {
                 Time.timeScale = 0;
                 Music.GetComponent<AudioSource>().Pause();
+                EventSystem.current.SetSelectedGameObject(firstItem);
             }
             else
             {
                 Time.timeScale = 1;
                 Music.GetComponent<AudioSource>().UnPause();
+                EventSystem.current.SetSelectedGameObject(null);
             }
             canvas.enabled = visible;
 		}
-	
+	    
 	}
 
 	public void Quit(){
