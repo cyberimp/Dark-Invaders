@@ -25,7 +25,6 @@ public class ShipSlotController : MonoBehaviour, IDropHandler
         leftPanel.SendMessage("SetMain", gameObject);
         rightPanel.SendMessage("SetMain", gameObject);
         nullGun = Resources.Load("Guns/Null Gun") as GameObject;
-        Debug.Log(nullGun.name);
         FillPrefabs();
     }
 
@@ -94,5 +93,22 @@ public class ShipSlotController : MonoBehaviour, IDropHandler
     {
         selection += amount;
         FillPrefabs();
+    }
+
+    public void ShowPanels()
+    {
+        isChoosing = true;
+        leftPanel.SendMessage("Visible", true);
+        rightPanel.SendMessage("Visible", true);
+
+    }
+
+    public void HidePanels(BaseEventData bed)
+    {
+
+        isChoosing = false;
+        leftPanel.SendMessage("Visible", false);
+        rightPanel.SendMessage("Visible", false);
+
     }
 }

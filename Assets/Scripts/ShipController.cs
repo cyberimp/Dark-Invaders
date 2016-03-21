@@ -20,14 +20,22 @@ public class ShipController : MonoBehaviour {
 	private float GodmodeCD = 5.0f;
 	private float alpha = 0.0f;
 	private float alphaSpeed = 1f;
+    public int HP = 10;
 
 
-	// Use this for initialization
-	void Start () {
-        inventory = new GameObject[2];
+    // Use this for initialization
+    void Start () {
 		myBody = GetComponent<Rigidbody2D> ();
 		startPosition = myBody.position;
-        if (PlayerDemoController.weaponPrefab!=null)
+        Restart();
+    }
+    
+    void Restart()
+    {
+        inventory = new GameObject[2];
+        myBody.MovePosition(startPosition);
+        myBody.velocity = Vector2.zero;
+        if (PlayerDemoController.weaponPrefab != null)
             GunSlot1 = PlayerDemoController.weaponPrefab;
         if (PlayerDemoController.utilityPrefab != null)
             UtilitySlot1 = PlayerDemoController.utilityPrefab;
@@ -45,6 +53,7 @@ public class ShipController : MonoBehaviour {
             inventory[1].transform.SetParent(transform);
             inventory[1].transform.localPosition = Vector3.zero;
         }
+        HPBar.SendMessage("SetHealth", HP);
     }
 
     // Update is called once per frame

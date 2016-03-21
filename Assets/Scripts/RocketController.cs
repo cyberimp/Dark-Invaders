@@ -7,7 +7,6 @@ public class RocketController : MonoBehaviour
     private Rigidbody2D cachedBody;
     public GameObject explosion;
 
-
     // Use this for initialization
     void Start()
     {
@@ -39,11 +38,11 @@ public class RocketController : MonoBehaviour
 
             }
             float myAngle = transform.rotation.eulerAngles.z;
-            Vector3 enemyVector =  nearest.transform.position - transform.position;
+            Vector3 enemyVector = nearest.transform.position - transform.position;
             transform.Rotate(new Vector3(0, 0, Mathf.Clamp(
                 Mathf.DeltaAngle(myAngle,
-                    Mathf.Atan2(enemyVector.y,enemyVector.x)*Mathf.Rad2Deg-90f),
-                -90f*Time.deltaTime,90f*Time.deltaTime)));
+                    Mathf.Atan2(enemyVector.y, enemyVector.x) * Mathf.Rad2Deg - 90f),
+                -90f * Time.deltaTime, 90f * Time.deltaTime)));
         }
 
         //      cachedAngle = transform.rotation.z + 90;
@@ -87,6 +86,7 @@ public class RocketController : MonoBehaviour
         Transform trail = transform.FindChild("Trail");
         trail.SetParent(null, true);
         trail.GetComponent<ParticleSystem>().Stop();
+        trail.name = ("Trail(Clone)");
         GameObject expl = Instantiate(explosion);
         expl.transform.position = transform.position;
         Destroy(expl, 3);

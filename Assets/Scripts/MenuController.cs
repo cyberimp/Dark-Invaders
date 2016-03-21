@@ -7,15 +7,17 @@ public class MenuController : MonoBehaviour {
     public GameObject Music;
     private Canvas canvas;
 	private bool visible;
-	// Use this for initialization
-	void Start () {
+    private bool isLocked = false;
+
+    // Use this for initialization
+    void Start () {
 		visible = false;
 		canvas = gameObject.GetComponent<Canvas> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButtonUp("Cancel")){
+		if(Input.GetButtonUp("Cancel")&&!isLocked){
 			visible = !visible;
             if (visible)
             {
@@ -40,4 +42,9 @@ public class MenuController : MonoBehaviour {
 		Time.timeScale = 1;
 		SceneManager.LoadScene("Zastavka");
 	}
+
+    void Lockdown(bool state)
+    {
+        isLocked = state;
+    }
 }

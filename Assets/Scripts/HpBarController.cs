@@ -5,22 +5,12 @@ using System.Collections;
 public class HpBarController : MonoBehaviour {
 
     public GameObject chip;
-    public int starthp=10;
+    public GameObject levelController;
     private Stack bar;
     private float timer = 1;
 
 	// Use this for initialization
 	void Start () {
-        bar = new Stack();
-        GameObject foo;
-        for (int i = 0; i < starthp; i++)
-        {
-            foo = Instantiate(chip);
-            foo.transform.SetParent(gameObject.transform,false);
-            foo.GetComponent<Image>().color = Color.HSVToRGB((float)i / (float)starthp * 0.4f, 
-                                                                0.9f, 0.9f);
-            bar.Push(foo);
-        }
     }
 
     // Update is called once per frame
@@ -38,6 +28,20 @@ public class HpBarController : MonoBehaviour {
 
     }
 
+    void SetHealth(int Amount)
+    {
+        bar = new Stack();
+        GameObject foo;
+        for (int i = 0; i < Amount; i++)
+        {
+            foo = Instantiate(chip);
+            foo.transform.SetParent(gameObject.transform, false);
+            foo.GetComponent<Image>().color = Color.HSVToRGB((float)i / (float)Amount * 0.4f,
+                                                                0.9f, 0.9f);
+            bar.Push(foo);
+        }
+    }
+
     void ChipOut()
     {
         if (bar.Count > 0)
@@ -48,7 +52,7 @@ public class HpBarController : MonoBehaviour {
         }
         else
         {
-            //TODO: Gameover!
+            levelController.SendMessage("GameOver");
         }
     }
 }
