@@ -32,6 +32,18 @@ public class BossController : MonoBehaviour {
 
     }
 
+    void SetPhysical()
+    {
+        PolygonCollider2D[] colliders = transform.GetComponentsInChildren<PolygonCollider2D>();
+        Collider2D PlayerCollider = 
+            GameObject.FindGameObjectWithTag("Player").GetComponent<CircleCollider2D>();
+        foreach (PolygonCollider2D currCollider in colliders)
+        {
+            currCollider.isTrigger = false;
+
+            Physics2D.IgnoreCollision(currCollider, PlayerCollider);
+        }
+    }
     // Update is called once per frame
     void Update () {
         anim.SetFloat("bossX", transform.position.x);

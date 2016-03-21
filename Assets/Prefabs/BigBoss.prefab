@@ -80,6 +80,7 @@ GameObject:
   - 212: {fileID: 21256856}
   - 60: {fileID: 6002714}
   - 114: {fileID: 11417758}
+  - 114: {fileID: 11495014}
   m_Layer: 9
   m_Name: Right Wing
   m_TagString: Enemy
@@ -165,6 +166,7 @@ GameObject:
   - 212: {fileID: 21205048}
   - 60: {fileID: 6063192}
   - 114: {fileID: 11420464}
+  - 114: {fileID: 11486184}
   m_Layer: 9
   m_Name: Boss Head
   m_TagString: Enemy
@@ -201,6 +203,7 @@ GameObject:
   - 60: {fileID: 6012362}
   - 114: {fileID: 11438518}
   - 82: {fileID: 8215124}
+  - 114: {fileID: 11488310}
   m_Layer: 9
   m_Name: Big Gun
   m_TagString: Enemy
@@ -219,6 +222,7 @@ GameObject:
   - 212: {fileID: 21285632}
   - 60: {fileID: 6091308}
   - 114: {fileID: 11443522}
+  - 114: {fileID: 11425214}
   m_Layer: 9
   m_Name: Left Wing
   m_TagString: Enemy
@@ -522,7 +526,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108372}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000000
   m_LinearDrag: 0.05
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -530,7 +534,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &6002714
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -766,6 +770,17 @@ MonoBehaviour:
   maxTurretCD: 1
   bullet: {fileID: 163302, guid: 327193d661af386459462558b85fcac4, type: 2}
   explosion: {fileID: 143818, guid: 628d4aa7c9a6d0a4290593c5052ada39, type: 2}
+--- !u!114 &11425214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9cd8ecdc262f343981c5956e16ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11430182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -827,6 +842,28 @@ MonoBehaviour:
   maxTurretCD: 1
   bullet: {fileID: 163302, guid: 327193d661af386459462558b85fcac4, type: 2}
   explosion: {fileID: 143818, guid: 628d4aa7c9a6d0a4290593c5052ada39, type: 2}
+--- !u!114 &11486184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9cd8ecdc262f343981c5956e16ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11488310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9cd8ecdc262f343981c5956e16ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11494020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -836,6 +873,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c93f5393b1082b4c8092a23b05bee87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11495014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9cd8ecdc262f343981c5956e16ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!198 &19813218
@@ -13350,6 +13398,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_ApplyRootMotion
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 1000000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
