@@ -15,6 +15,7 @@ public class LevelController : MonoBehaviour {
     public GameObject boss;
     public Canvas gameoverScreen;
     public Canvas pauseMenu;
+    public AnimationCurve bonus;
 
 	private GameObject[] spawnPoints;
     private GameObject[] enemies;
@@ -41,14 +42,15 @@ public class LevelController : MonoBehaviour {
 	}
 
 	IEnumerator LevelScript() {
-        music.SendMessage("SetMusic","bgm01");
-        yield return new WaitForSeconds(2f);
-        for (int j = 0; j < 2; ++j)
+        music.SendMessage("SetMusic","Level01");
+        yield return new WaitForSeconds(16f);
+        for (int j = 0; j < 20; ++j)
         {
-            for (int i = 0; i < 5; ++i)
+
+            int spawnpoint = UnityEngine.Random.Range(0,spawnPoints.Length);
+            for (int i = 0; i < 3; ++i)
             {
-                spawnPoints[0].SendMessage("Spawn", true);
-                spawnPoints[1].SendMessage("Spawn", false);
+                spawnPoints[spawnpoint].SendMessage("Spawn", bonus.Evaluate(UnityEngine.Random.value) > 0.5f);
                 enemies = GameObject.FindGameObjectsWithTag("Enemy");
                 foreach (GameObject enemy in enemies)
                 {
@@ -59,6 +61,7 @@ public class LevelController : MonoBehaviour {
             }
             yield return new WaitForSeconds(4f);
         }
+        music.SendMessage("SetMusic", "Boss01");
         GameObject newBoss = Instantiate(boss,new Vector3 (0,8,0),Quaternion.identity) as GameObject;
        // newBoss.GetComponent<Rigidbody2D>().AddForce(Vector2.down * 200f);
     }

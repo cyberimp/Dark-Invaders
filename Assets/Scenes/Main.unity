@@ -4028,8 +4028,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 79, y: 14}
-  m_SizeDelta: {x: 157, y: 29}
+  m_AnchoredPosition: {x: 120, y: 14.25}
+  m_SizeDelta: {x: 240, y: 28.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1580124409
 GameObject:
@@ -4402,6 +4402,27 @@ MonoBehaviour:
   boss: {fileID: 108372, guid: 159ddd16672c87840b983dda9526aefd, type: 2}
   gameoverScreen: {fileID: 1370523306}
   pauseMenu: {fileID: 1096780401}
+  bonus:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.88958335
+      value: 0.33437937
+      inSlope: 1.5044212
+      outSlope: 1.5044212
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1664735724
 GameObject:
   m_ObjectHideFlags: 0

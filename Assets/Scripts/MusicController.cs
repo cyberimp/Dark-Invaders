@@ -26,8 +26,10 @@ public class MusicController : MonoBehaviour {
 
     void SetMusic(string fileName)
     {
-        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>(fileName);
-        infoLabel.SendMessage("SetMusic", "o'er the flood\r\tgoreshit");
+        GameObject music = Resources.Load<GameObject>(fileName);
+        MusicInfo info = music.GetComponent<MusicInfo>();
+        GetComponent<AudioSource>().clip = info.sound;
+        infoLabel.SendMessage("SetMusic", info.songName + "\r\n\t" + info.songAuthor);
         GetComponent<AudioSource>().Play();
     }
 
