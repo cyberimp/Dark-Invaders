@@ -76,13 +76,13 @@ public class ShipController : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Fire"))
         {
             gameObject.GetComponent<Animator>().SetBool("Fire", true);
             inventory[0].SendMessage("Fire", true);
         }
 
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp("Fire"))
         {
             gameObject.GetComponent<Animator>().SetBool("Fire", false);
             inventory[0].SendMessage("Fire", false);

@@ -19,7 +19,7 @@ public class MenuController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButtonUp("Cancel")&&!isLocked){
+		if(Input.GetButtonUp("Pause")&&!isLocked){
 			visible = !visible;
             if (visible)
             {

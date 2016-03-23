@@ -36,7 +36,7 @@ public class LevelController : MonoBehaviour {
 	void Update () {
         if (gameoverScreen.enabled)
         {
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Fire"))
                 LevelRestart();
         }
 	}
