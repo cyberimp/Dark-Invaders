@@ -4,7 +4,7 @@
 
 2d unity game
 
-Nightly build [here](https://www.dropbox.com/s/lisr8w2kkzev05m/invaders.zip?dl=0)
+Nightly build [here](https://dl.dropboxusercontent.com/s/lisr8w2kkzev05m/invaders.zip)
 
 ## Some screenshots:
 ![](Screenshots/screen01.png)
