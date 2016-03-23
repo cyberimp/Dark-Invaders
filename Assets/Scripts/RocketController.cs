@@ -6,6 +6,7 @@ public class RocketController : MonoBehaviour
     private float rotSpeed = 0f;
     private Rigidbody2D cachedBody;
     public GameObject explosion;
+    public GameObject nearest;
 
     // Use this for initialization
     void Start()
@@ -25,7 +26,7 @@ public class RocketController : MonoBehaviour
             //do drunk rocket style
         }
         else {
-            GameObject nearest = enemies[0];
+            nearest = enemies[0];
             float distance = (transform.position - nearest.transform.position).sqrMagnitude;
             foreach (GameObject enemy in enemies)
             {

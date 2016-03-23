@@ -22,5 +22,6 @@ public class ChipController : MonoBehaviour {
         rb.AddTorque(-90);
         isFading = true;
         Destroy(gameObject, 1);
+        LeanTween.alpha(GetComponent<RectTransform>(), 0, 1);
     }
 }
