@@ -13,6 +13,8 @@ public class BossController : MonoBehaviour {
     private float stopCD = 0f;
     private Transform playerTrans;
     private Animator anim;
+    private Rigidbody2D rb;
+    Vector2 oldPosition;
 
     // Use this for initialization
     void Start () {
@@ -23,7 +25,9 @@ public class BossController : MonoBehaviour {
         flightDir = Vector2.down;
         playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
         anim = GetComponent<Animator>();
-	}
+        rb = GetComponent<Rigidbody2D>();
+        oldPosition = rb.position;
+    }
 	
     void Unlock()
     {
@@ -45,10 +49,14 @@ public class BossController : MonoBehaviour {
         }
     }
     // Update is called once per frame
-    void Update () {
-        anim.SetFloat("bossX", transform.position.x);
-        anim.SetFloat("bossY", transform.position.y);
- 	}
+    void FixedUpdate () {
+
+        anim.SetFloat("bossX", rb.position.x);
+        anim.SetFloat("bossY", rb.position.y);
+        anim.SetFloat("Xdelta", Mathf.Abs(oldPosition.x - rb.position.x)*100);
+        anim.SetFloat("Ydelta", Mathf.Abs(oldPosition.y - rb.position.y)*100);
+        oldPosition = rb.position;
+    }
     void GoBerserk()
     {
         GetComponent<Animator>().SetBool("isBerserking", true);

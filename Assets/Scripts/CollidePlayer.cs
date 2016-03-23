@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CollidePlayer : MonoBehaviour {
 
-    private Collider2D playerCollider;
-    private Collider2D thisCollider;
+    public Collider2D playerCollider;
+    public Collider2D thisCollider;
 
 	// Use this for initialization
 	void Start () {
@@ -18,8 +18,9 @@ public class CollidePlayer : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-        if (Physics2D.IsTouching(playerCollider, thisCollider))
+	void FixedUpdate () {
+        
+        if (Physics2D.CircleCast(transform.position,0.5f,Vector2.zero,0f, 1 << LayerMask.NameToLayer("Player")))
             playerCollider.SendMessage("Die", 1);
 	}
 }
