@@ -1,5 +1,6 @@
 # Dark Invaders
 [![Build Status](https://travis-ci.org/cyberimp/Dark-Invaders.svg?branch=master)](https://travis-ci.org/cyberimp/Dark-Invaders)
+[![GitHub issues](https://img.shields.io/github/issues/cyberimp/Dark-Invaders.svg)](https://github.com/cyberimp/Dark-Invaders/issues)
 
 2d unity game
 
