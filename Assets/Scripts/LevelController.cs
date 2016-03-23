@@ -21,6 +21,7 @@ public class LevelController : MonoBehaviour {
     private GameObject[] enemies;
     private GameObject player;
     private Coroutine currLevel;
+    private GameObject[] musicArray;
 
 	// Use this for initialization
 	void Start () {
@@ -42,7 +43,10 @@ public class LevelController : MonoBehaviour {
 	}
 
 	IEnumerator LevelScript() {
-        music.SendMessage("SetMusic","Level01");
+        musicArray = new GameObject[2];
+        musicArray[0] = Resources.Load("Level01") as GameObject;
+        musicArray[1] = Resources.Load("Boss01") as GameObject;
+        music.SendMessage("SetMusic",musicArray[0]);
         yield return new WaitForSeconds(16f);
         for (int j = 0; j < 20; ++j)
         {
@@ -61,7 +65,7 @@ public class LevelController : MonoBehaviour {
             }
             yield return new WaitForSeconds(4f);
         }
-        music.SendMessage("SetMusic", "Boss01");
+        music.SendMessage("SetMusic", musicArray[1]);
         GameObject newBoss = Instantiate(boss,new Vector3 (0,8,0),Quaternion.identity) as GameObject;
        // newBoss.GetComponent<Rigidbody2D>().AddForce(Vector2.down * 200f);
     }
