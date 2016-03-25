@@ -16,6 +16,7 @@ public class ShipSlotController : MonoBehaviour, IMoveHandler
     private int selection = 0;
     private bool isChoosing = false;
     private GameObject nullGun;
+    public Text gunDescription;
 
     // Use this for initialization
     void Start()
@@ -45,6 +46,8 @@ public class ShipSlotController : MonoBehaviour, IMoveHandler
         else
             rightPanel.SendMessage("SetPrefab", weaponPrefabs[selection + 1]);
         WeaponUpdate();
+        GunDescription gunDesc = weaponPrefabs[selection].GetComponent<GunDescription>();
+        gunDescription.text = gunDesc.description;
     }
 
     void UpdateColor()

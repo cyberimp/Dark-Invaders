@@ -12,6 +12,7 @@ GameObject:
   - 58: {fileID: 5845902}
   - 82: {fileID: 8283314}
   - 250: {fileID: 25056488}
+  - 114: {fileID: 11470410}
   m_Layer: 8
   m_Name: TractorBeam
   m_TagString: Tractor
@@ -119,6 +120,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &11470410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca53a60155ef9f4d96dbff2c022d844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunName: 
+  description: Tractor beam pull in useful ammuntion and upgrades
 --- !u!212 &21219132
 SpriteRenderer:
   m_ObjectHideFlags: 1

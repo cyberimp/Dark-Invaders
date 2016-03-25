@@ -1309,6 +1309,7 @@ MonoBehaviour:
   - {fileID: 124682, guid: 973ad6d2431e26142b3315c5d082fa30, type: 2}
   leftPanel: {fileID: 1586620313}
   rightPanel: {fileID: 1757939923}
+  gunDescription: {fileID: 1828991336}
 --- !u!222 &710591872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2294,6 +2295,7 @@ MonoBehaviour:
   - {fileID: 185682, guid: 474cd289b99c00641a9167cd79501e9e, type: 2}
   leftPanel: {fileID: 137976452}
   rightPanel: {fileID: 1775045925}
+  gunDescription: {fileID: 1828991336}
 --- !u!114 &1347514048
 MonoBehaviour:
   m_ObjectHideFlags: 0

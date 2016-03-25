@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 429174}
   - 212: {fileID: 21291050}
   - 82: {fileID: 8291838}
+  - 114: {fileID: 11498594}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -160,6 +161,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerSpeed: 0.2
+--- !u!114 &11498594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca53a60155ef9f4d96dbff2c022d844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunName: Personal Shield
+  description: Personal shield can stop most most bullets and small enemies
 --- !u!212 &21253112
 SpriteRenderer:
   m_ObjectHideFlags: 1

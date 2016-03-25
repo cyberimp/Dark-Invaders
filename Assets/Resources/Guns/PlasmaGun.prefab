@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunName: Plasma Gun
-  description: 
+  description: Plasma machinegun fires blobs of plasma at high rate
 --- !u!114 &11454394
 MonoBehaviour:
   m_ObjectHideFlags: 1

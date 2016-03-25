@@ -11,6 +11,7 @@ GameObject:
   - 82: {fileID: 8242556}
   - 212: {fileID: 21211396}
   - 114: {fileID: 11486168}
+  - 114: {fileID: 11476052}
   m_Layer: 0
   m_Name: RocketLauncher
   m_TagString: Untagged
@@ -105,6 +106,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &11476052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca53a60155ef9f4d96dbff2c022d844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunName: 
+  description: Rocket launcher fires smart rockets, that are smart enough to outrun
+    most foes
 --- !u!114 &11486168
 MonoBehaviour:
   m_ObjectHideFlags: 1
