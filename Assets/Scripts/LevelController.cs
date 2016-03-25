@@ -55,12 +55,6 @@ public class LevelController : MonoBehaviour {
             for (int i = 0; i < 3; ++i)
             {
                 spawnPoints[spawnpoint].SendMessage("Spawn", bonus.Evaluate(UnityEngine.Random.value) > 0.5f);
-                enemies = GameObject.FindGameObjectsWithTag("Enemy");
-                foreach (GameObject enemy in enemies)
-                {
-                    enemy.SendMessage("Fire", (Vector2)(player.transform.position - enemy.transform.position),
-                        SendMessageOptions.DontRequireReceiver);
-                }
                 yield return new WaitForSeconds(0.6f);
             }
             yield return new WaitForSeconds(4f);

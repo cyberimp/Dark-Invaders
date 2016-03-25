@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour {
     public GameObject bullet;
     public GameObject explosion;
     private bool dying = false;
+    private float CD = 0.5f;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,18 @@ public class EnemyController : MonoBehaviour {
 		myBody = gameObject.GetComponent<Rigidbody2D> ();
 	}
 	
+    void FixedUpdate()
+    {
+        CD -= Time.fixedDeltaTime;
+        if (CD < 0)
+        {
+            Vector2 angle = player.GetComponent<Rigidbody2D>().position - myBody.position; 
+            angle.Normalize();
+            Fire(angle*5);
+            CD = 0.5f;
+        }
+    }
+
 	// Update is called once per frame
 	void Update () {
 
