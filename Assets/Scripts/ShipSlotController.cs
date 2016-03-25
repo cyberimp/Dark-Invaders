@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 
-public class ShipSlotController : MonoBehaviour, IDropHandler
+public class ShipSlotController : MonoBehaviour, IMoveHandler
 {
     public ShopSlotController.ItemType accept;
     private GameObject weaponPrefab;
@@ -72,16 +72,6 @@ public class ShipSlotController : MonoBehaviour, IDropHandler
         }
     }
 
-    public void OnDrop(PointerEventData eventData)
-    {
-        Debug.Log("ok!");
-        if (ShopSlotController.itemDragged != null && ShopSlotController.typeDragged == accept)
-        {
-            weaponPrefab = ShopSlotController.itemDragged;
-            WeaponUpdate();
-        }
-    }
-
     public void OnClick()
     {
         isChoosing = !isChoosing;
@@ -110,5 +100,13 @@ public class ShipSlotController : MonoBehaviour, IDropHandler
         leftPanel.SendMessage("Visible", false);
         rightPanel.SendMessage("Visible", false);
 
+    }
+
+    public void OnMove(AxisEventData eventData)
+    {
+        if (eventData.moveDir == MoveDirection.Left && leftPanel.GetComponent<Image>().enabled)
+            MoveSelection(-1);
+        if (eventData.moveDir == MoveDirection.Right && rightPanel.GetComponent<Image>().enabled)
+            MoveSelection(1);
     }
 }
