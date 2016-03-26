@@ -15,7 +15,11 @@ public class LevelController : MonoBehaviour {
     public GameObject boss;
     public Canvas gameoverScreen;
     public Canvas pauseMenu;
+    public Canvas victoryScreen;
     public AnimationCurve bonus;
+
+    private IEnumerator[] levels;
+    private int levelNo; 
 
 	private GameObject[] spawnPoints;
     private GameObject[] enemies;
@@ -29,7 +33,10 @@ public class LevelController : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
 		spawnPoints = GameObject.FindGameObjectsWithTag ("Respawn");
         Array.Sort(spawnPoints,compare);
-		currLevel = StartCoroutine (LevelScript());
+        levels = new IEnumerator[2];
+        levelNo = 0;
+        levels[0] = LevelScript();
+		currLevel = StartCoroutine (levels[levelNo]);
 
 	}
 	
@@ -76,7 +83,7 @@ public class LevelController : MonoBehaviour {
                 Destroy(go);
         }
         player.SendMessage("Restart");
-        currLevel = StartCoroutine(LevelScript());
+        currLevel = StartCoroutine(levels[levelNo]);
         pauseMenu.SendMessage("Lockdown", false);
     }
 
@@ -87,5 +94,10 @@ public class LevelController : MonoBehaviour {
         Time.timeScale = 0;
         music.Stop();
         pauseMenu.SendMessage("Lockdown", true);
+    }
+
+    void Victory()
+    {
+
     }
 }
