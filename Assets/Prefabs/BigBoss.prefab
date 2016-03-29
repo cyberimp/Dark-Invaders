@@ -781,6 +781,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9cd8ecdc262f343981c5956e16ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCollider: {fileID: 0}
+  thisCollider: {fileID: 0}
 --- !u!114 &11430182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -853,6 +855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9cd8ecdc262f343981c5956e16ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCollider: {fileID: 0}
+  thisCollider: {fileID: 0}
 --- !u!114 &11488310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -864,6 +868,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9cd8ecdc262f343981c5956e16ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCollider: {fileID: 0}
+  thisCollider: {fileID: 0}
 --- !u!114 &11494020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -886,6 +892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9cd8ecdc262f343981c5956e16ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCollider: {fileID: 0}
+  thisCollider: {fileID: 0}
 --- !u!198 &19813218
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -940,7 +948,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     startLifetime:
-      scalar: 5
+      scalar: 1.8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1225,7 +1233,7 @@ ParticleSystem:
       minMaxState: 3
     randomizeRotationDirection: 0
     gravityModifier: 0
-    maxNumParticles: 5000
+    maxNumParticles: 3828
     rotation3D: 0
   ShapeModule:
     serializedVersion: 2
@@ -7191,7 +7199,7 @@ ParticleSystem:
       minMaxState: 0
     randomizeRotationDirection: 0
     gravityModifier: 0
-    maxNumParticles: 10000
+    maxNumParticles: 5018
     rotation3D: 0
   ShapeModule:
     serializedVersion: 2

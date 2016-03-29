@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class BonusController : MonoBehaviour {
 	GameObject player;
@@ -32,4 +33,9 @@ public class BonusController : MonoBehaviour {
 
 //        }
 	}
+
+    public void Enable(bool state)
+    {
+        GetComponent<BoxCollider2D>().enabled = state;
+    }
 }

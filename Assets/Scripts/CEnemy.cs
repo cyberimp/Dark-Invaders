@@ -14,7 +14,7 @@ namespace Assets.Scripts
 
         private GameObject player;
 
-        public void Start()
+        public virtual void Start()
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }

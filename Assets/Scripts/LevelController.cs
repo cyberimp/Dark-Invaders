@@ -6,7 +6,8 @@ public class nameComparer : IComparer
 {
     public int Compare(object x, object y)
     {
-        return (new CaseInsensitiveComparer()).Compare(((GameObject)x).name, ((GameObject)y).name);
+        return (new CaseInsensitiveComparer()).Compare(
+            ((GameObject)x).name, ((GameObject)y).name);
     }
 }
 
