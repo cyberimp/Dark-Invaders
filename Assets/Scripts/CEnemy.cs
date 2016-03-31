@@ -12,11 +12,19 @@ namespace Assets.Scripts
         public float HP;
         public GameObject explosion;
 
-        private GameObject player;
+        public GameObject player;
+
+        private LevelController lc;
 
         public virtual void Start()
         {
             player = GameObject.FindGameObjectWithTag("Player");
+        }
+
+        public virtual void OnEnable()
+        {
+            lc = FindObjectOfType<LevelController>();
+            lc.AddEnemy(gameObject);
         }
 
         public virtual void ApplyDamage(float value)
@@ -33,5 +41,26 @@ namespace Assets.Scripts
             Destroy(exp, 10);
             gameObject.tag = "MostlyHarmless";
         }
+
+        void OnDestroy()
+        {
+            if (lc!=null)
+                lc.DelEnemy(gameObject);
+        }
+
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            string otherTag = other.gameObject.tag;
+            if (otherTag == "Player")
+            {
+                player.SendMessage("Die", 1);
+                gameObject.SendMessage("ApplyDamage", 100);
+            }
+            if (otherTag == "EnemyFinish")
+            {
+                Destroy(gameObject);
+            }
+        }
+
     }
 }

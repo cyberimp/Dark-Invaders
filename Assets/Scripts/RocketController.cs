@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class RocketController : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class RocketController : MonoBehaviour
     private Rigidbody2D cachedBody;
     public GameObject explosion;
     public GameObject nearest;
+    private LevelController level;
 
     // Use this for initialization
     void Start()
@@ -15,13 +17,14 @@ public class RocketController : MonoBehaviour
         //        cachedAngle = transform.rotation.z+90;
         GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * 200);
         //GetComponent<Rigidbody2D>().angularVelocity = 90;
+        level = FindObjectOfType<LevelController>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemies.Length == 0)
+        List<GameObject> enemies = level.enemyList;
+        if (enemies.Count == 0)
         {
             //do drunk rocket style
         }

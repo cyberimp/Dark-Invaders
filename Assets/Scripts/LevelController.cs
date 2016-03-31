@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 public class nameComparer : IComparer
 {
@@ -23,7 +24,8 @@ public class LevelController : MonoBehaviour {
     private int levelNo; 
 
 	private GameObject[] spawnPoints;
-    private GameObject[] enemies;
+    private List<GameObject> enemies;
+    public List<GameObject> enemyList { get { return enemies; } }
     private GameObject player;
     private Coroutine currLevel;
     private GameObject[] musicArray;
@@ -38,8 +40,18 @@ public class LevelController : MonoBehaviour {
         levelNo = 0;
         levels[0] = LevelScript();
 		currLevel = StartCoroutine (levels[levelNo]);
-
+        enemies = new List<GameObject>();
 	}
+
+    public void DelEnemy(GameObject oldEnemy)
+    {
+        enemies.Remove(oldEnemy);
+    }
+
+    public void AddEnemy(GameObject newEnemy)
+    {
+        enemies.Add(newEnemy);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -74,7 +86,8 @@ public class LevelController : MonoBehaviour {
 
     void LevelRestart()
     {
-        StopAllCoroutines();
+        StopCoroutine(currLevel);
+        enemies.Clear();
         Time.timeScale = 1f;
         gameoverScreen.enabled = false;
         GameObject[] all = FindObjectsOfType<GameObject>();
