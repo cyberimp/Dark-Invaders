@@ -1394,6 +1394,28 @@ Transform:
   - {fileID: 1480356473}
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!1 &699549257 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 180328, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
+  m_PrefabInternal: {fileID: 272573118}
+--- !u!114 &699549258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699549257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da214e6067c90ef4f8f922698c7af8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -0.95535374, y: 1.6894667, z: 3}
+  - {x: 0.6496391, y: 3.0651748, z: 3}
+  - {x: -0.89803267, y: 4.574632, z: 3}
+  - {x: 0.57321095, y: 5.988554, z: 3}
+  - {x: -0.9553542, y: 7.5553327, z: 3}
+  - {x: 0.6878524, y: 9.446931, z: 3}
 --- !u!4 &774761575 stripped
 Transform:
   m_PrefabParentObject: {fileID: 493702, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
@@ -1407,11 +1429,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 493702, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.9252844
+      value: 5.71
       objectReference: {fileID: 0}
     - target: {fileID: 493702, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.3127835
+      value: 2.33
       objectReference: {fileID: 0}
     - target: {fileID: 493702, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2049,6 +2071,28 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1129878986 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 180328, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
+  m_PrefabInternal: {fileID: 1045968884}
+--- !u!114 &1129878987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1129878986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da214e6067c90ef4f8f922698c7af8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -0.95535374, y: 1.6894667, z: 3}
+  - {x: 0.6496391, y: 3.0651748, z: 3}
+  - {x: -0.89803267, y: 4.574632, z: 3}
+  - {x: 0.57321095, y: 5.988554, z: 3}
+  - {x: -0.9553542, y: 7.5553327, z: 3}
+  - {x: 0.6878524, y: 9.446931, z: 3}
 --- !u!1 &1136455444
 GameObject:
   m_ObjectHideFlags: 0
@@ -4061,6 +4105,71 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1391713355 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 180328, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
+  m_PrefabInternal: {fileID: 1801455996}
+--- !u!114 &1391713356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1391713355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da214e6067c90ef4f8f922698c7af8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 2.1179051, y: 1.1182129, z: 3}
+  - {x: 4.202709, y: -1.1371655, z: 3}
+  - {x: 6.931906, y: 1.1561182, z: 3}
+  - {x: 9.736915, y: -1.2508821, z: 3}
+  - {x: 13.129458, y: 1.5920312, z: 3}
+  - {x: 15.820749, y: -1.5162208, z: 3}
+--- !u!1 &1434646004 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 180328, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
+  m_PrefabInternal: {fileID: 819818155}
+--- !u!114 &1434646005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1434646004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da214e6067c90ef4f8f922698c7af8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -1.6725664, y: 1.3266933, z: 3}
+  - {x: -4.267906, y: -1.1371653, z: 3}
+  - {x: -7.0831423, y: 1.1371658, z: 3}
+  - {x: -10.112198, y: -1.4404093, z: 3}
+  - {x: -12.949937, y: 1.4404099, z: 3}
+--- !u!1 &1445886667 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 180328, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
+  m_PrefabInternal: {fileID: 1747388349}
+--- !u!114 &1445886668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1445886667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da214e6067c90ef4f8f922698c7af8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -0.95535374, y: 1.6894667, z: 3}
+  - {x: 0.6496391, y: 3.0651748, z: 3}
+  - {x: -0.89803267, y: 4.574632, z: 3}
+  - {x: 0.57321095, y: 5.988554, z: 3}
+  - {x: -0.9553542, y: 7.5553327, z: 3}
+  - {x: 0.6878524, y: 9.446931, z: 3}
 --- !u!4 &1480356473 stripped
 Transform:
   m_PrefabParentObject: {fileID: 493702, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
@@ -4925,7 +5034,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 493702, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.87
+      value: -6.11
       objectReference: {fileID: 0}
     - target: {fileID: 493702, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5313,6 +5422,28 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1919168583}
+--- !u!1 &1937849404 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 180328, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
+  m_PrefabInternal: {fileID: 1267147905}
+--- !u!114 &1937849405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1937849404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da214e6067c90ef4f8f922698c7af8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -0.95535374, y: 1.6894667, z: 3}
+  - {x: 0.6496391, y: 3.0651748, z: 3}
+  - {x: -0.89803267, y: 4.574632, z: 3}
+  - {x: 0.57321095, y: 5.988554, z: 3}
+  - {x: -0.9553542, y: 7.5553327, z: 3}
+  - {x: 0.6878524, y: 9.446931, z: 3}
 --- !u!1 &1981954506
 GameObject:
   m_ObjectHideFlags: 0

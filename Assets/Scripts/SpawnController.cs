@@ -19,12 +19,19 @@ public class SpawnController : MonoBehaviour {
 
 	void Spawn(bool isBonus) {
         ParticleSystem ps = GetComponent<ParticleSystem>();
+        WayPointsController wpc = GetComponent<WayPointsController>();
         ps.Play();
         //GetComponent<AudioSource>().Play();
 		GameObject newEnemy = Instantiate (enemyType) as GameObject;
-		newEnemy.transform.position = gameObject.transform.position;
+        newEnemy.transform.position = gameObject.transform.position;
 		if (isBonus)
 			newEnemy.SendMessage ("SetBonus", bonus);
-		newEnemy.SendMessage ("Move", this.direction);	
+        if (wpc != null)
+        {
+            WayPointsController enemyWPC = newEnemy.AddComponent<WayPointsController>();
+            enemyWPC.waypoints = wpc.waypoints;
+        }
+        else
+        newEnemy.SendMessage ("Move", this.direction);	
 	}
 }

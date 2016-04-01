@@ -169,9 +169,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23506f4d89bf4a9439983ef70b55f911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
-  bullet: {fileID: 167462, guid: 7ea8d91eeb98e314792e9fdce6f0d884, type: 2}
+  HP: 10
   explosion: {fileID: 117428, guid: 05a80d3fb2f6ef643b7823e277c2a912, type: 2}
+  player: {fileID: 0}
+  bullet: {fileID: 167462, guid: 7ea8d91eeb98e314792e9fdce6f0d884, type: 2}
 --- !u!198 &19851918
 ParticleSystem:
   m_ObjectHideFlags: 1
