@@ -22,17 +22,18 @@ public class WayPointsController : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-        if (moveBody!=null && targetWaypoint < waypoints.Length)
+        if (moveBody != null && targetWaypoint < waypoints.Length)
+        {
+            Vector2 oldWayPos;
+            if (targetWaypoint == 0)
+                oldWayPos = Vector2.zero;
+            else
+                oldWayPos = new Vector2(waypoints[targetWaypoint - 1].x,
+                                              waypoints[targetWaypoint - 1].y);
+            Vector2 newPosition = new Vector2(waypoints[targetWaypoint].x,
+                                              waypoints[targetWaypoint].y) - oldWayPos;
             if (isMoving)//We are on way from one waypoint to another, shouldn't miss it
             {
-                Vector2 oldWayPos;
-                if (targetWaypoint == 0)
-                    oldWayPos = Vector2.zero;
-                else
-                    oldWayPos = new Vector2(waypoints[targetWaypoint - 1].x,
-                                                  waypoints[targetWaypoint - 1].y);
-                Vector2 newPosition = new Vector2(waypoints[targetWaypoint].x,
-                                                  waypoints[targetWaypoint].y) - oldWayPos;
                 if ((moveBody.position - oldPosition).SqrMagnitude() > newPosition.SqrMagnitude())
                 {
                     isMoving = false;
@@ -43,20 +44,12 @@ public class WayPointsController : MonoBehaviour {
             else//Let's find another waypoint!
             {
                 oldPosition = moveBody.position;
-                Vector2 oldWayPos;
-                if (targetWaypoint == 0)
-                    oldWayPos = Vector2.zero;
-                else 
-                    oldWayPos = new Vector2(waypoints[targetWaypoint-1].x,
-                                                  waypoints[targetWaypoint-1].y);
-                Vector2 newPosition = new Vector2(waypoints[targetWaypoint].x, 
-                                                  waypoints[targetWaypoint].y)-oldWayPos;
                 newPosition.Normalize();
                 Vector2 velocity = newPosition * waypoints[targetWaypoint].z;
                 moveBody.velocity = velocity;
                 isMoving = true;
             }
-	
+        }
 	}
 
 }

@@ -51,7 +51,7 @@ public class EnemyController : Assets.Scripts.CEnemy {
         //gameObject.GetComponent<SpriteRenderer> ().enabled = false;
         //		ps.Emit (500);
         //        ps.Play();
-		Destroy (gameObject,0.3f);
+		Destroy (gameObject,0.2f);
 	}
 
 	override public void ApplyDamage(float value){

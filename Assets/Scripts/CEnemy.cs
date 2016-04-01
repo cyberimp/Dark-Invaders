@@ -38,6 +38,7 @@ namespace Assets.Scripts
         {
             GameObject exp = Instantiate(explosion);
             exp.transform.SetParent(transform, false);
+            exp.transform.SetParent(null, true);
             Destroy(exp, 10);
             gameObject.tag = "MostlyHarmless";
         }
