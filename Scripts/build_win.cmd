@@ -6,7 +6,7 @@ del /Q invaders_64.exe
 rd /S /Q invaders_64_Data
 rd /S /Q webplayerbuild
 
-D:\soft\Unity\Editor\Unity.exe -quit -projectPath "D:\Devel\Dark-Invaders" -no-graphics -batchmode -buildWebPlayer "D:\devel\webplayerbuild" -buildWindowsPlayer "D:\Devel\invaders.exe" -buildWindows64Player "D:\Devel\invaders_64.exe"
+D:\soft\Unity\Editor\Unity.exe -quit -projectPath "D:\Devel\Dark-Invaders" -logFile D:\devel\unity.log -no-graphics -batchmode -buildWebPlayer "D:\devel\webplayerbuild" -buildWindowsPlayer "D:\Devel\invaders.exe" -buildWindows64Player "D:\Devel\invaders_64.exe"
 
 del "invaders.old"
 move "d:\devel\invaders.zip" "D:\devel\invaders.old"
