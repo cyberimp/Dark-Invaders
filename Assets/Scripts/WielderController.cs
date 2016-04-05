@@ -26,6 +26,7 @@ public class WielderController : Assets.Scripts.CEnemy {
     override public void Die()
     {
         bonus.GetComponent<BonusController>().Enable(true);
+        bonus.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         bonus.transform.SetParent(null, true);
         base.Die();
         Destroy(gameObject);

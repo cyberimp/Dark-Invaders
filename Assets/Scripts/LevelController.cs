@@ -67,18 +67,30 @@ public class LevelController : MonoBehaviour {
         musicArray[0] = Resources.Load("Level01") as GameObject;
         musicArray[1] = Resources.Load("Boss01") as GameObject;
         music.SendMessage("SetMusic",musicArray[0]);
-        yield return new WaitForSeconds(16f);
-        for (int j = 0; j < 20; ++j)
+        yield return new WaitForSeconds(16.774f);//music intro
+        for (int i = 0; i < 4; i++)
         {
-
-            int spawnpoint = UnityEngine.Random.Range(0,spawnPoints.Length);
-            for (int i = 0; i < 3; ++i)
+            for (int j = 0; j < 3; j++)
             {
-                spawnPoints[spawnpoint].SendMessage("Spawn", bonus.Evaluate(UnityEngine.Random.value) > 0.5f);
+                spawnPoints[i%2].SendMessage("Spawn", false);
                 yield return new WaitForSeconds(0.6f);
+
             }
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(4.951f-1.8f);
         }
+        yield return new WaitForSeconds(0.4f);
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                spawnPoints[i%2].SendMessage("Spawn", false);
+                yield return new WaitForSeconds(0.6f);
+
+            }
+            yield return new WaitForSeconds(4.551f - 1.8f);
+        }
+        yield return new WaitForSeconds(60f);
+
         music.SendMessage("SetMusic", musicArray[1]);
         GameObject newBoss = Instantiate(boss,new Vector3 (0,8,0),Quaternion.identity) as GameObject;
        // newBoss.GetComponent<Rigidbody2D>().AddForce(Vector2.down * 200f);

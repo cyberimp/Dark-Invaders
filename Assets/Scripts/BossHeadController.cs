@@ -35,4 +35,11 @@ public class BossHeadController : Assets.Scripts.CEnemy{
             gameObject.SendMessageUpwards("GoBerserk");
     }
 
+    public override void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "EnemyFinish")
+            return;
+        base.OnTriggerEnter2D(other);
+    }
+
 }

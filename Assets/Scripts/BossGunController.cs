@@ -88,5 +88,11 @@ public class BossGunController : Assets.Scripts.CEnemy{
         rayCollider.enabled = false;
     }
 
+    public override void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "EnemyFinish")
+            return;
+        base.OnTriggerEnter2D(other);
+    }
 
 }

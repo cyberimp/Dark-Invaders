@@ -31,4 +31,12 @@ public class BossWingController : Assets.Scripts.CEnemy {
         transform.FindChild("Gun").SendMessage("Die");
 
     }
+
+    public override void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "EnemyFinish")
+            return;
+        base.OnTriggerEnter2D(other);
+    }
+
 }

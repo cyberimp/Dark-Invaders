@@ -9,6 +9,7 @@ public class BossController : MonoBehaviour {
     public GameObject[] turrets;
     public GameObject bigGun;
     public SpriteRenderer berserkingDialog;
+    private bool isCollider = false;
     private float dialogCD = 0f;
     private float stopCD = 0f;
     private Transform playerTrans;
@@ -18,6 +19,7 @@ public class BossController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        PolygonCollider2D[] colliders = transform.GetComponentsInChildren<PolygonCollider2D>();
         foreach (GameObject curTurret in turrets)
         {
             curTurret.SendMessage("Lockdown", true);

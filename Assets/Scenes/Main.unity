@@ -4121,12 +4121,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {x: 2.1179051, y: 1.1182129, z: 3}
-  - {x: 4.202709, y: -1.1371655, z: 3}
-  - {x: 6.931906, y: 1.1561182, z: 3}
-  - {x: 9.736915, y: -1.2508821, z: 3}
-  - {x: 13.129458, y: 1.5920312, z: 3}
-  - {x: 15.820749, y: -1.5162208, z: 3}
+  - {x: 1.53, y: 0.00000047683716, z: 2}
+  - {x: 1.6, y: 0.00000047683716, z: 0.05}
+  - {x: 12.864119, y: 0.00000047683716, z: 3}
 --- !u!1 &1434646004 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 180328, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
@@ -5068,6 +5065,10 @@ Prefab:
       propertyPath: m_Name
       value: Enemy Spawn (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 11484266, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
+      propertyPath: enemyType
+      value: 
+      objectReference: {fileID: 114676, guid: 3937df2c11e0e0448a623ec3361a3287, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f924aca7b63fcdc44b38d09235535b64, type: 2}
   m_IsPrefabParent: 0
