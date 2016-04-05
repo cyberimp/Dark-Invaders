@@ -57,7 +57,7 @@ public class PlasmaMachineGunController : MonoBehaviour {
                 ParticleSystem.EmissionModule module;
                 module = psCurr.emission;
                 module.enabled = true;
-                Debug.Log(psCurr);
+//                Debug.Log(psCurr);
 //                psCurr.Play();
             }
         }

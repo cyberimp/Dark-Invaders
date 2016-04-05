@@ -26,7 +26,7 @@ public class PlayerDemoController : MonoBehaviour {
             Destroy(weaponPrefab);
         }
         weaponPrefab = Instantiate(prefab);
-        weaponPrefab.GetComponent<AudioSource>().enabled = false;
+//        weaponPrefab.GetComponent<AudioSource>().enabled = false;
         weaponPrefab.transform.parent = transform;
         weaponPrefab.name = "Test Gun";
         weaponPrefab.transform.localPosition = new Vector3();
@@ -40,7 +40,7 @@ public class PlayerDemoController : MonoBehaviour {
             Destroy(utilityPrefab);
         }
         utilityPrefab = Instantiate(prefab);
-        utilityPrefab.GetComponent<AudioSource>().enabled = false;
+//        utilityPrefab.GetComponent<AudioSource>().enabled = false;
         utilityPrefab.transform.parent = transform;
         utilityPrefab.name = "Test Utility";
         utilityPrefab.transform.localPosition = new Vector3();

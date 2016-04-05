@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class RocketController : MonoBehaviour
 {
-    private float rotSpeed = 0f;
+//    private float rotSpeed = 0f;
     private Rigidbody2D cachedBody;
     public GameObject explosion;
     public GameObject nearest;
@@ -23,7 +23,9 @@ public class RocketController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        List<GameObject> enemies = level.enemyList;
+        List<GameObject> enemies = new List<GameObject>();
+        if (level!=null)
+            enemies = level.enemyList;
         if (enemies.Count == 0)
         {
             //do drunk rocket style
@@ -65,25 +67,25 @@ public class RocketController : MonoBehaviour
     {
     }
 
-    void Left()
-    {
-        //        GetComponent<Rigidbody2D>().angularVelocity = 90;
-        //        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        rotSpeed = -90f;
-    }
+    //void Left()
+    //{
+    //    //        GetComponent<Rigidbody2D>().angularVelocity = 90;
+    //    //        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    //    rotSpeed = -90f;
+    //}
 
-    void Right()
-    {
-        //        GetComponent<Rigidbody2D>().angularVelocity = -90;
-        //        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        rotSpeed = 90f;
-    }
+    //void Right()
+    //{
+    //    //        GetComponent<Rigidbody2D>().angularVelocity = -90;
+    //    //        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    //    rotSpeed = 90f;
+    //}
 
-    void Ok()
-    {
-        //        GetComponent<Rigidbody2D>().angularVelocity = 0;
-        rotSpeed = 0f;
-    }
+    //void Ok()
+    //{
+    //    //        GetComponent<Rigidbody2D>().angularVelocity = 0;
+    //    rotSpeed = 0f;
+    //}
 
     void Die()
     {
