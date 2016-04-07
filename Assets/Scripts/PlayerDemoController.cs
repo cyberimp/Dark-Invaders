@@ -9,7 +9,7 @@ public class PlayerDemoController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        DontDestroyOnLoad(GetComponent<PlayerDemoController>());
+      //  DontDestroyOnLoad(GetComponent<PlayerDemoController>());
 	
 	}
 	

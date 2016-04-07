@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class BossHeadController : Assets.Scripts.CEnemy{
 
@@ -40,6 +41,12 @@ public class BossHeadController : Assets.Scripts.CEnemy{
         if (other.tag == "EnemyFinish")
             return;
         base.OnTriggerEnter2D(other);
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        EventSystem.current.SendMessage("Victory");
     }
 
 }

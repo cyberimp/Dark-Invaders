@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class nameComparer : IComparer
 {
@@ -37,9 +38,9 @@ public class LevelController : MonoBehaviour {
 		spawnPoints = GameObject.FindGameObjectsWithTag ("Respawn");
         Array.Sort(spawnPoints,compare);
         levels = new IEnumerator[2];
-        levelNo = 0;
-        levels[0] = LevelScript();
-		currLevel = StartCoroutine (levels[levelNo]);
+        levelNo = StateController.GetLevel();
+        LevelsLoad();
+        currLevel = StartCoroutine (levels[levelNo]);
         enemies = new List<GameObject>();
 	}
 
@@ -60,9 +61,21 @@ public class LevelController : MonoBehaviour {
             if (Input.GetButtonDown("Fire"))
                 LevelRestart();
         }
-	}
+        if (victoryScreen.enabled)
+        {
+            if (Input.GetButtonDown("Fire"))
+                NextLevel();
+        }
+    }
 
-	IEnumerator LevelScript() {
+    private void NextLevel()
+    {
+        levelNo = StateController.IncLevel();
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("Shop");
+    }
+
+    IEnumerator LevelScript() {
         musicArray = new GameObject[2];
         musicArray[0] = Resources.Load("Level01") as GameObject;
         musicArray[1] = Resources.Load("Boss01") as GameObject;
@@ -89,11 +102,18 @@ public class LevelController : MonoBehaviour {
             }
             yield return new WaitForSeconds(4.551f - 1.8f);
         }
+        yield return new WaitForSeconds(0.4f);
+        spawnPoints[2].SendMessage("Spawn", false);
         yield return new WaitForSeconds(60f);
 
         music.SendMessage("SetMusic", musicArray[1]);
         GameObject newBoss = Instantiate(boss,new Vector3 (0,8,0),Quaternion.identity) as GameObject;
        // newBoss.GetComponent<Rigidbody2D>().AddForce(Vector2.down * 200f);
+    }
+
+    void LevelsLoad()
+    {
+        levels[0] = LevelScript();
     }
 
     void LevelRestart()
@@ -102,6 +122,7 @@ public class LevelController : MonoBehaviour {
         enemies.Clear();
         Time.timeScale = 1f;
         gameoverScreen.enabled = false;
+        victoryScreen.enabled = false;
         GameObject[] all = FindObjectsOfType<GameObject>();
         foreach (GameObject go in all)
         {
@@ -109,6 +130,7 @@ public class LevelController : MonoBehaviour {
                 Destroy(go);
         }
         player.SendMessage("Restart");
+        LevelsLoad();
         currLevel = StartCoroutine(levels[levelNo]);
         pauseMenu.SendMessage("Lockdown", false);
     }
@@ -124,6 +146,9 @@ public class LevelController : MonoBehaviour {
 
     void Victory()
     {
-
+        victoryScreen.enabled = true;
+        Time.timeScale = 0;
+        music.Stop();
+        pauseMenu.SendMessage("Lockdown", true);
     }
 }

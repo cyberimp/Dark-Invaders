@@ -72,6 +72,8 @@ public class ShipSlotController : MonoBehaviour, IMoveHandler
             }
             else
                 playerDemo.SendMessage("SetUtility", weaponPrefab);
+
+            StateController.Equip(weaponPrefab, accept);
         }
     }
 

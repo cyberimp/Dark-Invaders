@@ -35,10 +35,13 @@ public class ShipController : MonoBehaviour {
         inventory = new GameObject[2];
         myBody.MovePosition(startPosition);
         myBody.velocity = Vector2.zero;
-        if (PlayerDemoController.weaponPrefab != null)
-            GunSlot1 = PlayerDemoController.weaponPrefab;
-        if (PlayerDemoController.utilityPrefab != null)
-            UtilitySlot1 = PlayerDemoController.utilityPrefab;
+        GameObject[] stateInventory = StateController.Inventory();
+        if (stateInventory != null)
+        {
+            GunSlot1 = stateInventory[0];
+            UtilitySlot1 = stateInventory[1];
+        }
+
         if (GunSlot1 != null)
         {
             GunSlot1.GetComponent<AudioSource>().enabled = true;
