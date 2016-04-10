@@ -61,6 +61,7 @@ public class BossGunController : Assets.Scripts.CEnemy{
         module.enabled = true;
         GameObject.Find("Boss Head").SendMessage("Destroyed", 3);
         isDead = true;
+        gameObject.SendMessage("Disable");
     }
 
     public void Fire()

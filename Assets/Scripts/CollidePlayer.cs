@@ -5,6 +5,7 @@ public class CollidePlayer : MonoBehaviour {
 
     public Collider2D playerCollider;
     public Collider2D thisCollider;
+    private bool isEnabled = true;
 
 	// Use this for initialization
 	void Start () {
@@ -19,8 +20,13 @@ public class CollidePlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        
-        if (Physics2D.CircleCast(transform.position,0.5f,Vector2.zero,0f, 1 << LayerMask.NameToLayer("Player")))
+        if (isEnabled)
+        if ((playerCollider.transform.position - thisCollider.transform.position).sqrMagnitude < 0.25f)
             playerCollider.SendMessage("Die", 1);
 	}
+
+    void Disable()
+    {
+        isEnabled = false;
+    }
 }

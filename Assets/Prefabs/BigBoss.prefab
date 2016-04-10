@@ -367,7 +367,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.005, y: -1.841, z: 0}
+  m_LocalPosition: {x: 0.007, y: -1.854, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 446150}
@@ -394,7 +394,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.205, y: 0.085, z: 0}
+  m_LocalPosition: {x: -1.2099, y: 0.0849, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 464264}
@@ -408,7 +408,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.204, y: 0.084, z: 0}
+  m_LocalPosition: {x: 1.21497, y: 0.07995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 426034}
@@ -508,7 +508,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.99935585, y: 3.7203712, z: 0}
+  m_LocalPosition: {x: -2.7030895, y: 0.7033259, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 446590}
@@ -742,6 +742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 1000
   explosion: {fileID: 117428, guid: 05a80d3fb2f6ef643b7823e277c2a912, type: 2}
+  player: {fileID: 0}
   signal: 2
 --- !u!114 &11420464
 MonoBehaviour:
@@ -756,6 +757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 2000
   explosion: {fileID: 117428, guid: 05a80d3fb2f6ef643b7823e277c2a912, type: 2}
+  player: {fileID: 0}
 --- !u!114 &11420786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -812,6 +814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 1000
   explosion: {fileID: 117428, guid: 05a80d3fb2f6ef643b7823e277c2a912, type: 2}
+  player: {fileID: 0}
   DeathRay: {fileID: 19813218}
   DeathRayEnergy: {fileID: 19891236}
   DeathRayGlow: {fileID: 19898374}
@@ -829,6 +832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 1000
   explosion: {fileID: 117428, guid: 05a80d3fb2f6ef643b7823e277c2a912, type: 2}
+  player: {fileID: 0}
   signal: 1
 --- !u!114 &11478796
 MonoBehaviour:

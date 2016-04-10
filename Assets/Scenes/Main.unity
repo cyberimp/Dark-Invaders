@@ -4048,7 +4048,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 480708, guid: 3188729c2542b96488bfdfe6dca1aeec, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3188729c2542b96488bfdfe6dca1aeec, type: 2}
@@ -5733,7 +5733,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 422488, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11491214, guid: 50bb6f5e1253c2e41a5937b8abfd0d66, type: 2}
       propertyPath: HPBar
