@@ -38,8 +38,10 @@ public class ShipController : MonoBehaviour {
         GameObject[] stateInventory = StateController.Inventory();
         if (stateInventory != null)
         {
-            GunSlot1 = stateInventory[0];
-            UtilitySlot1 = stateInventory[1];
+            if(stateInventory[0] != null)
+                GunSlot1 = stateInventory[0];
+            if (stateInventory[1] != null)
+                UtilitySlot1 = stateInventory[1];
         }
 
         if (GunSlot1 != null)

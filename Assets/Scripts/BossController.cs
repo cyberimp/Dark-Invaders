@@ -3,29 +3,29 @@ using System.Collections;
 
 public class BossController : MonoBehaviour {
 
-    private float fireCD = 0f;
-    int aiStage = 1;
-    private Vector2 flightDir;
+//    private float fireCD = 0f;
+//    int aiStage = 1;
+//    private Vector2 flightDir;
     public GameObject[] turrets;
     public GameObject bigGun;
     public SpriteRenderer berserkingDialog;
-    private bool isCollider = false;
-    private float dialogCD = 0f;
-    private float stopCD = 0f;
-    private Transform playerTrans;
+//    private bool isCollider = false;
+//    private float dialogCD = 0f;
+//    private float stopCD = 0f;
+//    private Transform playerTrans;
     private Animator anim;
     private Rigidbody2D rb;
     Vector2 oldPosition;
 
     // Use this for initialization
     void Start () {
-        PolygonCollider2D[] colliders = transform.GetComponentsInChildren<PolygonCollider2D>();
+ //       PolygonCollider2D[] colliders = transform.GetComponentsInChildren<PolygonCollider2D>();
         foreach (GameObject curTurret in turrets)
         {
             curTurret.SendMessage("Lockdown", true);
         }
-        flightDir = Vector2.down;
-        playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
+        //flightDir = Vector2.down;
+//        playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         oldPosition = rb.position;

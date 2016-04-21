@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ChipController : MonoBehaviour {
-    private bool isFading = false;
+//    private bool isFading = false;
 
     // Use this for initialization
     void Start () {
@@ -20,7 +20,7 @@ public class ChipController : MonoBehaviour {
         rb.gravityScale = 1;
         rb.AddForce(new Vector2(50, 150));
         rb.AddTorque(-90);
-        isFading = true;
+//        isFading = true;
         Destroy(gameObject, 1);
         LeanTween.alpha(GetComponent<RectTransform>(), 0, 1);
     }

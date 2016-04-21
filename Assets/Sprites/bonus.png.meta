@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 56276ba7513e1a5418fcfa4f38bb754f
+labels:
+- Effect
 timeCreated: 1453112675
 licenseType: Free
 TextureImporter:
@@ -75,7 +77,7 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []
-  spritePackingTag: 
+  spritePackingTag: ship
   userData: 
   assetBundleName: 
   assetBundleVariant: 

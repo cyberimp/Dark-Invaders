@@ -247,7 +247,7 @@ TextureImporter:
         - {x: 32, y: 27}
         - {x: 29, y: 32}
     outline: []
-  spritePackingTag: 
+  spritePackingTag: enemy
   userData: 
   assetBundleName: 
   assetBundleVariant: 

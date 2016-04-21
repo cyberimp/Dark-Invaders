@@ -7,7 +7,7 @@ public class HpBarController : MonoBehaviour {
     public GameObject chip;
     public GameObject levelController;
     private Stack bar;
-    private float timer = 1;
+//    private float timer = 1;
 
 	// Use this for initialization
 	void Start () {

@@ -41,11 +41,13 @@ namespace Assets.Scripts
             exp.transform.SetParent(null, true);
             Destroy(exp, 10);
             gameObject.tag = "MostlyHarmless";
+            if (lc != null)
+                lc.DelEnemy(gameObject);
         }
 
-        void OnDestroy()
+        public virtual void OnDestroy()
         {
-            if (lc!=null)
+            if (lc != null)
                 lc.DelEnemy(gameObject);
         }
 

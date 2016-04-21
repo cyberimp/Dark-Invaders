@@ -11,9 +11,11 @@ public class BossGunController : Assets.Scripts.CEnemy{
     private float FireCD = 0f;
     private float ShutdownCD = 0f;
     private bool isDead = false;
+    private BossHP bar;
 
-	// Use this for initialization
-	new void Start () {
+    // Use this for initialization
+    new void Start () {
+        bar = transform.FindChild("Canvas").GetComponentInChildren<BossHP>();
         base.Start();
 //        DeathRay.sortingLayerName = "Bullets";
 //        DeathRay.enabled = false;
@@ -94,6 +96,13 @@ public class BossGunController : Assets.Scripts.CEnemy{
         if (other.tag == "EnemyFinish")
             return;
         base.OnTriggerEnter2D(other);
+    }
+
+    public override void ApplyDamage(float value)
+    {
+        base.ApplyDamage(value);
+        if (bar != null)
+            bar.SendMessage("SetHp", HP / 1000);
     }
 
 }

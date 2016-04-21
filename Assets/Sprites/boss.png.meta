@@ -296,7 +296,7 @@ TextureImporter:
         - {x: 91.5, y: -37}
         - {x: 91.5, y: 53}
     outline: []
-  spritePackingTag: 
+  spritePackingTag: enemy
   userData: 
   assetBundleName: 
   assetBundleVariant: 

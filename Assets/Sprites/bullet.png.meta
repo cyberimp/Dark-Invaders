@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 87a6e3e88bb60c746b36ab23b519f7e6
+labels:
+- Weapon
 timeCreated: 1452691868
 licenseType: Free
 TextureImporter:
@@ -99,7 +101,7 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []
-  spritePackingTag: 
+  spritePackingTag: ship
   userData: 
   assetBundleName: 
   assetBundleVariant: 

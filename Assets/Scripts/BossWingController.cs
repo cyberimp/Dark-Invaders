@@ -6,9 +6,12 @@ public class BossWingController : Assets.Scripts.CEnemy {
 
     [Tooltip(" 1 - left wing, 2 - right wing")]
     public int signal;
+
+    private BossHP bar;
     // Use this for initialization
     new void Start()
     {
+        bar = transform.FindChild("Canvas").GetComponentInChildren<BossHP>();
         base.Start();
     }
 
@@ -38,6 +41,13 @@ public class BossWingController : Assets.Scripts.CEnemy {
         if (other.tag == "EnemyFinish")
             return;
         base.OnTriggerEnter2D(other);
+    }
+
+    public override void ApplyDamage(float value)
+    {
+        base.ApplyDamage(value);
+        if (bar != null)
+            bar.SendMessage("SetHp",HP/1000);
     }
 
 }
