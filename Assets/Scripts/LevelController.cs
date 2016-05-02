@@ -27,6 +27,12 @@ public class LevelController : MonoBehaviour {
 	private GameObject[] spawnPoints;
     private List<GameObject> enemies;
     public List<GameObject> enemyList { get { return enemies; } }
+
+    [SerializeField]
+    private GameObject dialogue;
+
+    [SerializeField]
+    private Sprite[] facesToSmash;
     private GameObject player;
     private Coroutine currLevel;
     private GameObject[] musicArray;
@@ -42,6 +48,7 @@ public class LevelController : MonoBehaviour {
         LevelsLoad();
         currLevel = StartCoroutine (levels[levelNo]);
         enemies = new List<GameObject>();
+        dialogue.SetActive(false);
 	}
 
     public void DelEnemy(GameObject oldEnemy)
