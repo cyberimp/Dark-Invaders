@@ -16,6 +16,8 @@ public class TextType : MonoBehaviour {
     private string typeBuffer = "Lorem Ipsum Dolor Sit Amet";
     private int curSymbol = 0;
 
+    public bool isFinished { get { return (curSymbol >= typeBuffer.Length); } }
+
 
     // Use this for initialization
     void Start () {
@@ -54,7 +56,7 @@ public class TextType : MonoBehaviour {
         }
     }
 
-    void TypeThis (string str)
+    public void TypeThis (string str)
     {
         typeBuffer = str;
         thisText.text = "_";
@@ -62,5 +64,6 @@ public class TextType : MonoBehaviour {
         typeCD = maxTypeCD;
         cursorCD = maxCursorCD;
         isCursor = true;
+        curSymbol = 0;
     }
 }

@@ -29,7 +29,7 @@ public class LevelController : MonoBehaviour {
     public List<GameObject> enemyList { get { return enemies; } }
 
     [SerializeField]
-    private GameObject dialogue;
+    private DialogueController dialogue;
 
     [SerializeField]
     private Sprite[] facesToSmash;
@@ -48,7 +48,7 @@ public class LevelController : MonoBehaviour {
         LevelsLoad();
         currLevel = StartCoroutine (levels[levelNo]);
         enemies = new List<GameObject>();
-        dialogue.SetActive(false);
+//        dialogue.SetActive(false);
 	}
 
     public void DelEnemy(GameObject oldEnemy)
@@ -87,6 +87,11 @@ public class LevelController : MonoBehaviour {
         musicArray[0] = Resources.Load("Level01") as GameObject;
         musicArray[1] = Resources.Load("Boss01") as GameObject;
         music.SendMessage("SetMusic",musicArray[0]);
+
+        dialogue.AddMessage(new DialogueController.DialogueMessage("Stay awhile and listen!", 5.5f, 1));
+        dialogue.AddMessage(new DialogueController.DialogueMessage("I do not need an instruction level.", 5.5f, 0));
+        dialogue.AddMessage(new DialogueController.DialogueMessage("I prefer to blow up everything on my way.", 5.5f, 0));
+        dialogue.gameObject.SetActive(true);
         yield return new WaitForSeconds(16.774f);//music intro
         for (int i = 0; i < 4; i++)
         {
