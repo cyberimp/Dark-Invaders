@@ -88,9 +88,9 @@ public class LevelController : MonoBehaviour {
         musicArray[1] = Resources.Load("Boss01") as GameObject;
         music.SendMessage("SetMusic",musicArray[0]);
 
-        dialogue.AddMessage(new DialogueController.DialogueMessage("Stay awhile and listen!", 5.5f, 1));
-        dialogue.AddMessage(new DialogueController.DialogueMessage("I do not need an instruction level.", 5.5f, 0));
-        dialogue.AddMessage(new DialogueController.DialogueMessage("I prefer to blow up everything on my way.", 5.5f, 0));
+        dialogue.AddMessage("Stay awhile and listen!", 5.5f, 1);
+        dialogue.AddMessage("I do not need an instruction level.", 5.5f, 0);
+        dialogue.AddMessage("I prefer to blow up everything on my way.", 5.5f, 0);
         dialogue.gameObject.SetActive(true);
         yield return new WaitForSeconds(16.774f);//music intro
         for (int i = 0; i < 4; i++)

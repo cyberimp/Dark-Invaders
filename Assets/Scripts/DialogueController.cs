@@ -67,4 +67,18 @@ public class DialogueController : MonoBehaviour {
         messages.Add(text);
 
     }
+
+
+    /// <summary>
+    /// Add message to dialogue system buffer, don't forget to call SetActive on
+    /// DialogueController.gameObject to show them after adding all messages in series
+    /// </summary>
+    /// <param name="text">Message text</param>
+    /// <param name="lifetime">Message max showtime</param>
+    /// <param name="face">Number of talking head in FacesToSmash array</param>
+    public void AddMessage(string text, float lifetime, int face)
+    {
+        AddMessage(new DialogueMessage(text,lifetime,face));
+    }
+
 }
